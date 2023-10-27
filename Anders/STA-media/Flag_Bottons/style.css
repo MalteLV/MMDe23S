@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Lato:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.language {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 320px;
+  max-height: 240px;
+  gap: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+.language__flagButton {
+  display: flex;
+  padding: 5px;
+  max-width: 143px;
+  max-height: 30px;
+  gap: 5px;
+  border-radius: 5px;
+  background-color: #b6e1f9;
+  border: none;
+  font-family: "Lato", sans-serif;
+}
+.language__flagButton:active {
+  background-color: #00b0eb;
+}
+.language__flagIcon {
+  max-width: 32px;
+  max-height: 20px;
+  border-radius: 4px;
+}

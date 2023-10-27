@@ -1,0 +1,11 @@
+.StartScreen {
+  width: 320px;
+  height: 230px;
+  background-color: #00b0eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+  display: flex;
+}

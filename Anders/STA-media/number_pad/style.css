@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Lato:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+.numberpad {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  justify-content: center;
+}
+.serviceHeading {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+.password {
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+}
+.numberpad__number {
+  width: 35px;
+  height: 35px;
+  background-color: #e1eaef;
+}
+.numberpad__enter {
+  width: 70px;
+  height: 70px;
+  background-color: #e1eaef;
+  grid-row: 1 / 3;
+  grid-column: 6;
+}
+.numberpad__escape {
+  width: 35px;
+  height: 35px;
+  background-color: #e1eaef;
+}
+.numberpad__delete {
+  width: 35px;
+  height: 35px;
+  background-color: #e1eaef;
+}

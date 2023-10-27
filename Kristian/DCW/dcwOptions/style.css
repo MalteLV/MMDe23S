@@ -1,0 +1,67 @@
+.Options {
+  width: 320px;
+  height: 180px;
+  background-color: #00b0eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+  display: flex;
+}
+.Header {
+  width: 310px;
+  height: 40px;
+  background-color: #b8f2ff;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.Icons {
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.clock {
+  font-size: 2em;
+  text-align: center;
+  font-size: x-large;
+  padding-left: 30px;
+}
+
+.IconTilstand {
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.CommonRegion {
+  width: 355px;
+  height: 164px;
+  background-color: #b8f2ff;
+  margin: 5px;
+  float: right;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+#SprogButton {
+  background-color: #03d1ff;
+  color: #000000;
+  font-weight: bold;
+  padding: 5px 35px;
+  font-size: smaller;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  margin-bottom: 14px;
+  margin-right: 11px;
+  margin-left: 11px;
+}
+
+#SprogButton:active {
+  background-color: #00459a;
+}

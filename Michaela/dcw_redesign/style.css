@@ -1,0 +1,222 @@
+.body{
+    margin: 0%;
+}
+
+.pauseScreen{
+    background-color: #1AF37F;
+}
+.systemStatus{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 96px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+    margin-top: 120px;
+    line-height: 0%;
+    font-weight: 400;
+}
+.systemMessage{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 47px;
+}
+.systemMessage__message{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 20px;
+    font-weight: 400;
+}
+
+
+.saltStatus{
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 9px;
+}
+.saltStatus__text{
+    font-size: 32px;
+    margin: 0px;
+    font-style: normal;
+    font-weight: 400;
+}
+.saltStatus__number{
+    font-size: 16px;
+    margin: 0px;
+    font-style: normal;
+    font-weight: 400;
+}
+.saltStatus__bar{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 302px;
+    height: 24px;
+}
+.saltstatus__progress{
+    background-color: #00FF77;
+    width: 241px;
+    height: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 116px;
+    height: 30px;
+  }
+ 
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+ 
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F24848;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+ 
+  .slider:before {
+    position: absolute;
+    content: "on";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input:checked + .slider:before {
+    content: "On";
+}
+input + .slider:before {
+    content: "Off";
+}
+ 
+  input:checked + .slider {
+    background-color: #00FF77;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+ 
+  input:focus + .slider {
+    box-shadow: 0 0 1px #00FF77;
+  }
+ 
+  input:checked + .slider:before {
+    -webkit-transform: translateX(56px);
+    -ms-transform: translateX(56px);
+    transform: translateX(86px);
+  }
+ 
+  .slider.round {
+    border-radius: 34px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .slider.round:before {
+    border-radius: 50%;
+  }
+.navbar{
+    background-color: #60ABF1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+    /*height: 47px;*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar__icon{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center both horizontally and vertically */
+    width: 100%;
+    height: 47px;  
+}
+.navbar__icon img {
+    display: block;
+    max-width: 100%;
+    padding-bottom: 7px;
+  }
+.navbar__icon.navbar__icons--active {
+    background-color: white;
+}
+.fullscreen-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Styling for the code container */
+.code__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* Styling for the code input box */
+.code-input {
+    width: 150px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded sides */
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bolder;
+    margin-top: 4px;
+    
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none; 
+}
+
+/* Styling for the keypad container */
+.keypad-container {
+    text-align: center;
+}
+
+/* Styling for circular buttons */
+.circle {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%; /* Makes the buttons circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #ccc;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+}
+.numpad__icon{
+  width: 28px;
+  height: 28px;
+  padding-left: 2px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+}

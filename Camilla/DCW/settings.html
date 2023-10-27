@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DCW interface</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="mainPage--maintenance">
+      <section class="standbyScreen__error standby">
+        <a class="standbyScreen__closeIcon" href="index.html"
+          ><img src="images/x.svg" alt="close icon"
+        /></a>
+        <img
+          class="standbyScreen__errorIcon"
+          src="images/error.svg"
+          alt="error icon"
+        />
+        <h2 class="standbyScreen__errorMessage">INGEN BLØDGØRING VALGT</h2>
+        <a class="standbyScreen__resetAlarm" href="alarms.html">Reset Alarm</a>
+      </section>
+      <h2 class="header">Daglig drift</h2>
+      <nav class="mainMenu">
+        <a class="mainMenu__icons" href="index.html"
+          ><img src="images/home.svg" alt="home icon"
+        /></a>
+        <a class="mainMenu__icons" href="alarms.html"
+          ><img src="images/alarm.svg" alt="alarm icon"
+        /></a>
+        <a class="mainMenu__icons" href="serviceLogin.html"
+          ><img src="images/service.svg" alt="service icon"
+        /></a>
+        <a class="mainMenu__icons mainMenu__icons--active" href="settings.html"
+          ><img src="images/settings.svg" alt="settings icon"
+        /></a>
+      </nav>
+      <article class="settings">
+        <a class="settingsInfo" href="contact.html"
+          ><img
+            class="settingsContact__image settingsContact__image--phone"
+            src="images/contact.svg"
+            alt="contact icon"
+          />Kontakt oplysninger</a
+        >
+        <a class="settingsInfo" href="language.html"
+          ><img
+            class="settingsContact__imageFlag"
+            src="images/Denmark.svg"
+            alt="flag"
+          />Sprog</a
+        >
+      </article>
+    </section>
+    <script>
+      const standbyElement = document.querySelector(".standby");
+      standbyElement.addEventListener("click", () => {
+        doTheTimeout();
+        standbyElement.classList.toggle("standby--active");
+      });
+      function doTheTimeout() {
+        // standbyElement.classList.toggle('standby--active');
+        setTimeout(() => {
+          standbyElement.classList.toggle("standby--active");
+        }, 10000);
+      }
+
+      doTheTimeout();
+    </script>
+  </body>
+</html>

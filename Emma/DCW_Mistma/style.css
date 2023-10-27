@@ -1,0 +1,115 @@
+.MainPage {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+}
+body {
+  margin: 0;
+}
+.header {
+  margin: 0;
+  background-color: #c8d8dd;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  grid-column-start: 2;
+  grid-template-columns: 23px 1fr;
+  width: 100%;
+  height: 23px;
+}
+.mainMenu {
+  background-color: #6cb3cc;
+  margin-left: none;
+  grid-column-start: 1;
+  height: 240px;
+}
+.mainMenu__icons {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 14px;
+}
+.mainMenu__icons--active {
+  background-color: white;
+}
+.alarmHistory {
+  display: flex;
+  flex-flow: column;
+  padding-left: 16px;
+  gap: 0.5rem;
+}
+.alarmHistory__header {
+  font-size: 16px;
+  font-weight: normal;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0;
+}
+.alarmHistory__warnings {
+  background-color: #ebebeb;
+  width: 235px;
+  height: 50px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 26px 1fr;
+}
+.alarmHistory__images {
+  width: 26px;
+  margin-top: 10px;
+  grid-row: span 2;
+  padding-left: 5px;
+}
+.alarmHistory__titel {
+  margin: 0;
+  font-size: 16px;
+  grid-column-start: 2;
+  padding-left: 10px;
+}
+.alarmHistory__date {
+  padding-left: 10px;
+  margin: 0;
+  font-size: 16px;
+  grid-column-start: 2;
+}
+
+.settingsContact__imageFlag {
+  width: 36px;
+  height: 26px;
+}
+.settingsInfo {
+  background-color: #ebebeb;
+  width: 235px;
+  height: 29px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  margin-left: 16px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: black;
+  gap: 1rem;
+}
+.contact__info {
+  width: 169px;
+  padding-left: 64px;
+  padding-top: 5px;
+}
+.language {
+  background-color: #ebebeb;
+  width: 235px;
+  height: 29px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  grid-template-rows: 26px 1fr;
+  text-decoration: none;
+  color: black;
+  margin-left: 16px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.languageImages {
+  width: 23px;
+  height: 26px;
+  margin-left: 16px;
+}

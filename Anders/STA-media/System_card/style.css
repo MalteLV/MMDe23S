@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Lato:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.systemCard {
+  width: 119px;
+  height: 140px;
+  background: rgb(183, 229, 249);
+  background: linear-gradient(
+    0deg,
+    rgba(183, 229, 249, 1) 0%,
+    rgba(183, 229, 249, 0) 100%
+  );
+  padding: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+.systemCard__heading {
+  font-size: 18px;
+}
+.systemCard__calculation {
+  padding: 1px;
+  background-color: white;
+  width: 119px;
+  height: 20px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+}
+.systemCard__button {
+  width: 119px;
+  height: 20px;
+  background-color: #259bcd;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+}
