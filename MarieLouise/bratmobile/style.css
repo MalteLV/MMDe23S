@@ -1,0 +1,33 @@
+body{
+    background-color: bisque;
+    display: grid;
+    gap: 1rem;
+}
+
+
+.albumCover{
+    max-height: 240px;
+    position: relative;
+    z-index: 5;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+}
+
+.vinyl{
+    position: relative;
+    left: -215px;
+    top: -15px;
+    z-index: 1;
+}
+.vinylAlbum:hover > .vinyl{
+    animation: spin 2s forwards;
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+        left: -215px;
+    }
+    to{
+        transform: rotate(360deg);
+        left: -110px;
+    }
+}
