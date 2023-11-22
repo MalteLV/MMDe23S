@@ -10,6 +10,7 @@ body {
     /*height: 600px;*/
     background-image: url(/images/band.PNG);
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .parallax__image{

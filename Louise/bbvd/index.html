@@ -10,9 +10,18 @@
 </head>
 <body>
     <section class="parallax">
-        <img src="images/concert_gray.png" alt="" class="parallax__image parallax__image--back" id="grayLayer">
-        <img src="images/concert_darkgray.png" alt="" class="parallax__image parallax__image--mid" id="darkGrayLayer">
+        <picture>
+            <source media="(min-width:650px)" srcset="images/concert_small_gray" class="parallax__image parallax__image--back">
+            <img src="images/concert_gray.png" alt="" class="parallax__image parallax__image--back" id="grayLayer">
+        </picture>
+        <picture>
+            <source media="(min-width:650px)" srcset="images/concert_small_darkgray" class="parallax__image parallax__image--mid">
+            <img src="images/concert_darkgray.png" alt="" class="parallax__image parallax__image--mid" id="darkGrayLayer">
+            </picture>
+            <picture>
+                <source media="(min-width:650px)" srcset="images/concert_small_black" class="parallax__image parallax__image--front">
         <img src="images/concert_black.png" alt="" class="parallax__image parallax__image--front" id="blackLayer">
+        </picture>
     </section>
     <section class="video">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quia dolore nam placeat non aperiam velit necessitatibus. Suscipit quisquam modi nihil saepe praesentium corporis, eos facere soluta voluptates! Dolorum, dolores?</p>
