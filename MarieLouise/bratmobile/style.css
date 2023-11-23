@@ -12,7 +12,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 /* header/logo */
-.header{
+.header {
   display: grid;
   place-content: center;
 }
@@ -22,23 +22,27 @@ body {
   margin-inline: auto;
 }
 
+.polaroid__container{
+  position: relative;
+}
+
 /* Her er selve boblen */
 .bubble {
   position: absolute;
   font-family: sans-serif;
-  font-weight: 900;
+  font-weight: 300;
   font-size: 18px;
   line-height: 24px;
   width: 300px;
-  background: #eb9fff;
+  background: #eb64b2;
   border-radius: 40px;
   padding: 24px;
   text-align: center;
   color: #000;
   z-index: 1;
-  top: 18%;
-  left: 30%;
-  display: none;
+  top: -10%;
+  left: 40%;
+  opacity: 0;
 }
 
 /* Her er den lille trekant i */
@@ -47,12 +51,25 @@ body {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 25px solid #eb9fff;
+  border-left: 25px solid #eb64b2;
   border-right: 12px solid transparent;
-  border-top: 12px solid #eb9fff;
+  border-top: 12px solid #eb64b2;
   border-bottom: 20px solid transparent;
   left: 32px;
   bottom: -24px;
+}
+.bubble-bottom-right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 25px solid #eb64b2;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #eb64b2;
+  border-bottom: 20px solid transparent;
+  left: 273px;
+  bottom: -24px;
+  transform: scaleX(-1);
 }
 
 /* her er polaroid */
@@ -61,6 +78,7 @@ body {
   margin-inline: auto;
 }
 .polaroid {
+  position: relative;
   background-color: white;
   padding: 20px 15px 15px 15px;
   box-shadow: 5px 10px 27px rgba(0, 0, 0, 0.5);
@@ -73,7 +91,7 @@ body {
   transform: rotate(5deg);
   margin-left: 29%;
 }
-.polaroid__description--header{
+.polaroid__description--header {
   margin-top: 10px;
   text-align: center;
   font-size: 20px;
@@ -94,120 +112,146 @@ body {
   z-index: 1;
   top: 4rem;
 }
-.polaroid__container:hover > .bubble {
-  opacity: 1;
-}
 
 /* her er albummerne med vinyler */
 
-.albumCover{
+.albumCover {
   max-width: 220px;
   position: relative;
   z-index: 5;
 }
-.allVinyls{
+.allVinyls {
   display: grid;
   gap: 4rem;
-  margin: 4rem ;
+  margin: 4rem;
 }
-.vinyl{
+.vinyl {
   position: absolute;
   width: 210px;
   z-index: 1;
   left: 5px;
-  top:5px;
+  top: 5px;
 }
-.vinylAlbum{
-height: 230px;
-position: relative;
+.vinylAlbum {
+  height: 230px;
+  position: relative;
 }
-.vinylAlbum:hover > .vinyl{
+.vinylAlbum:hover > .vinyl {
   animation: spin 2s forwards;
 }
-@keyframes spin{
-  from{
-      transform: rotate(0deg);
-      left: 5px;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    left: 5px;
   }
-  to{
-      transform: rotate(360deg);
-      left: 110px;
+  to {
+    transform: rotate(360deg);
+    left: 110px;
   }
 }
-.albumCover--1{
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
-    0 0 40px #51ca0b, 0 0 50px #0C7A11;
+.albumCover--1 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0c7a11, 0 0 20px #0c7a11,
+    0 0 40px #51ca0b, 0 0 50px #0c7a11;
 }
-.vinyl--1{
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
-    0 0 40px #51ca0b, 0 0 50px #0C7A11;
+.vinyl--1 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0c7a11, 0 0 20px #0c7a11,
+    0 0 40px #51ca0b, 0 0 50px #0c7a11;
   border-radius: 50%;
 }
-.albumCover--2{ 
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
-    0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
+.albumCover--2 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ef0d0d, 0 0 20px #ef0d0d,
+    0 0 40px #ef0d0d, 0 0 50px #ef0d0d;
 }
-.vinyl--2{
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
-    0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
+.vinyl--2 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ef0d0d, 0 0 20px #ef0d0d,
+    0 0 40px #ef0d0d, 0 0 50px #ef0d0d;
   border-radius: 50%;
 }
-.albumCover--3{
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
-    0 0 40px #E36BAC, 0 0 50px #E36BAC;
+.albumCover--3 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #e36bac, 0 0 20px #e36bac,
+    0 0 40px #e36bac, 0 0 50px #e36bac;
 }
-.vinyl--3{
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
-    0 0 40px #E36BAC, 0 0 50px #E36BAC;
+.vinyl--3 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #e36bac, 0 0 20px #e36bac,
+    0 0 40px #e36bac, 0 0 50px #e36bac;
   border-radius: 50%;
 }
-.albumCover--4{
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
-    0 0 40px #A9E61A, 0 0 50px #A9E61A;
+.albumCover--4 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #a9e61a, 0 0 20px #a9e61a,
+    0 0 40px #a9e61a, 0 0 50px #a9e61a;
 }
-.vinyl--4{
-  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
-    0 0 40px #A9E61A, 0 0 50px #A9E61A;
+.vinyl--4 {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #a9e61a, 0 0 20px #a9e61a,
+    0 0 40px #a9e61a, 0 0 50px #a9e61a;
   border-radius: 50%;
 }
-.albumCover--5{
+.albumCover--5 {
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
     0 0 40px #ffffff, 0 0 50px #ffffff;
 }
-.vinyl--5{
+.vinyl--5 {
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
     0 0 40px #ffffff, 0 0 50px #ffffff;
   border-radius: 50%;
 }
 
-@media (min-width:551px){
-  .polaroid__description{
+@media (min-width: 551px) {
+  .bubble {
+    opacity: 0;
+  }
+  .polaroid__container:hover > .bubble {
+    opacity: 1;
+    transition: 0.4s;
+  }
+
+  .polaroid__description {
     display: none;
   }
-  .polaroid{
+  .polaroid {
     width: 320px;
   }
-  .vinylAlbum{
+  .vinylAlbum {
     height: 280px;
   }
-  .vinyl{
+  .vinyl {
     top: 10px;
     width: 260px;
   }
-  .albumCover{
+  .albumCover {
     max-width: 280px;
-  } 
- .allVinyls{
-  place-content: center;
- }
- @keyframes spin{
-  from{
+  }
+  .allVinyls {
+    place-content: center;
+  }
+  @keyframes spin {
+    from {
       transform: rotate(0deg);
       left: 3px;
-  }
-  to{
+    }
+    to {
       transform: rotate(360deg);
       left: 150px;
+    }
   }
-}
+  .allPolaroids{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .polaroid__container{
+    margin-top: 3rem;
+  }
+  
+  .polaroid__container--right{
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+  .polaroid__container--left{
+    grid-row-start: 3;
+  }
+  .polaroid--two{
+    margin-left: 0;
+  }
+  .bubble--right{
+    left: -40%;
+  }
 }
