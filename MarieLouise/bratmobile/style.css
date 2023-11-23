@@ -1,7 +1,8 @@
 body{
     background-color: bisque;
     display: grid;
-    gap: 1rem;
+    gap: 4rem;
+    margin: 4rem ;
 }
 
 
@@ -9,7 +10,6 @@ body{
     max-height: 240px;
     position: relative;
     z-index: 5;
-    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
 }
 
 .vinyl{
@@ -18,6 +18,8 @@ body{
     top: -15px;
     z-index: 1;
 }
+
+
 .vinylAlbum:hover > .vinyl{
     animation: spin 2s forwards;
 }
@@ -30,4 +32,68 @@ body{
         transform: rotate(360deg);
         left: -110px;
     }
+}
+
+.albumCover--1{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
+      0 0 40px #51ca0b, 0 0 50px #0C7A11;
+}
+
+.vinyl--1{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
+      0 0 40px #51ca0b, 0 0 50px #0C7A11;
+    border-radius: 50%;
+}
+
+.albumCover--2{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
+      0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
+}
+
+.vinyl--2{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
+      0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
+    border-radius: 50%;
+}
+.albumCover--3{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
+      0 0 40px #E36BAC, 0 0 50px #E36BAC;
+}
+
+.vinyl--3{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
+      0 0 40px #E36BAC, 0 0 50px #E36BAC;
+    border-radius: 50%;
+}
+
+.albumCover--4{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
+      0 0 40px #A9E61A, 0 0 50px #A9E61A;
+}
+
+.vinyl--4{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
+      0 0 40px #A9E61A, 0 0 50px #A9E61A;
+    border-radius: 50%;
+}
+
+.albumCover--5{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
+      0 0 40px #ffffff, 0 0 50px #ffffff;
+}
+
+.vinyl--5{
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
+      0 0 40px #ffffff, 0 0 50px #ffffff;
+    border-radius: 50%;
 }
