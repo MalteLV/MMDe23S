@@ -11,10 +11,15 @@ body {
   height: 30vh;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-
+/* header/logo */
 .header{
   display: grid;
   place-content: center;
+}
+.logoImage {
+  position: relative;
+  max-width: 100%;
+  margin-inline: auto;
 }
 
 /* Her er selve boblen */
@@ -49,33 +54,37 @@ body {
   left: 32px;
   bottom: -24px;
 }
+
+/* her er polaroid */
 .polaroid__image {
   max-width: 100%;
   margin-inline: auto;
 }
 .polaroid {
   background-color: white;
-  padding: 10px 10px 20px 10px;
+  padding: 20px 15px 15px 15px;
   box-shadow: 5px 10px 27px rgba(0, 0, 0, 0.5);
-  width: 10rem;
+  width: 14rem;
   margin-top: 10%;
   margin-left: 8%;
   transform: rotate(-5deg);
 }
 .polaroid--two {
   transform: rotate(5deg);
-  margin-left: 45%;
+  margin-left: 29%;
+}
+.polaroid__description--header{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
 }
 .polaroid__description {
-  margin-top: 25px;
+  margin-top: 5px;
   text-align: center;
+  margin-left: 6px;
+  margin-right: 6px;
+  font-size: 20px;
 }
-.logoImage {
-  position: relative;
-  max-width: 100%;
-  margin-inline: auto;
-}
-
 .polaroid__one {
   background-color: rgb(250, 250, 250);
   height: 12rem;
@@ -89,64 +98,55 @@ body {
   opacity: 1;
 }
 
+/* her er albummerne med vinyler */
+
 .albumCover{
   max-width: 220px;
   position: relative;
   z-index: 5;
 }
-
-
 .allVinyls{
   display: grid;
   gap: 4rem;
   margin: 4rem ;
 }
-
-
-
 .vinyl{
-  position: relative;
-  max-width: 185px;
-  left: 27px;
-  top: -208px;
+  position: absolute;
+  width: 210px;
   z-index: 1;
+  left: 5px;
+  top:5px;
 }
-
 .vinylAlbum{
 height: 230px;
+position: relative;
 }
-
-
 .vinylAlbum:hover > .vinyl{
   animation: spin 2s forwards;
 }
 @keyframes spin{
   from{
       transform: rotate(0deg);
-      left: 27px;
+      left: 5px;
   }
   to{
       transform: rotate(360deg);
-      left: 124px;
+      left: 110px;
   }
 }
-
 .albumCover--1{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
     0 0 40px #51ca0b, 0 0 50px #0C7A11;
 }
-
 .vinyl--1{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
     0 0 40px #51ca0b, 0 0 50px #0C7A11;
   border-radius: 50%;
 }
-
 .albumCover--2{ 
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
     0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
 }
-
 .vinyl--2{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
     0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
@@ -156,31 +156,58 @@ height: 230px;
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
     0 0 40px #E36BAC, 0 0 50px #E36BAC;
 }
-
 .vinyl--3{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
     0 0 40px #E36BAC, 0 0 50px #E36BAC;
   border-radius: 50%;
 }
-
 .albumCover--4{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
     0 0 40px #A9E61A, 0 0 50px #A9E61A;
 }
-
 .vinyl--4{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
     0 0 40px #A9E61A, 0 0 50px #A9E61A;
   border-radius: 50%;
 }
-
 .albumCover--5{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
     0 0 40px #ffffff, 0 0 50px #ffffff;
 }
-
 .vinyl--5{
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
     0 0 40px #ffffff, 0 0 50px #ffffff;
   border-radius: 50%;
+}
+
+@media (min-width:551px){
+  .polaroid__description{
+    display: none;
+  }
+  .polaroid{
+    width: 320px;
+  }
+  .vinylAlbum{
+    height: 280px;
+  }
+  .vinyl{
+    top: 10px;
+    width: 260px;
+  }
+  .albumCover{
+    max-width: 280px;
+  } 
+ .allVinyls{
+  place-content: center;
+ }
+ @keyframes spin{
+  from{
+      transform: rotate(0deg);
+      left: 3px;
+  }
+  to{
+      transform: rotate(360deg);
+      left: 150px;
+  }
+}
 }
