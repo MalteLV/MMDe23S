@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+}
+.louie{
+    background-color: #A4C29C;
+    height: 852px;
+}
+.louie__logo{
+    width: 332px;
+    margin: auto;
+    display: block;
+    padding-top: 1rem;
+}
+.louie__scrolling{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.louie__text{
+
+}
+.louie__trompet{
+    width: 241px;
+}
+.louie__albumName{
+    display: flex;
+    justify-content: center;
+}
+
+
+.louie__scrolling {
+    background: #F3F1C7;
+    height: 125px;
+    transform: skewY(+8deg);
+    border-top:6px solid #C4563E;
+    border-bottom:6px solid #C4563E;
+    outline:6px solid #010101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Irish Grover, sans-serif;
+    font-size: 32px;
+  }
+
+  .louie__albumName{
+    background: #F3F1C7;
+    height: 125px;
+    transform: skewY(-8deg);
+    border-top:6px solid #C4563E;
+    border-bottom:6px solid #C4563E;
+    outline:6px solid #010101;
+    display: flex;
+    align-items: center;
+    font-family: Irish Grover, sans-serif;
+    font-size: 48px;
+    margin: 0;
+  }
+  .louie__scrolling2{
+    margin-top: 1rem;
+  }
+  .word1 {
+    color: #C4563E; /* Set the color for the first word */
+}
+.word2 {
+    color: black; /* Set the color for the second word */
+}
+.word3 {
+    color: #C4563E; /* Set the color for the third word */
+}
+
+@media (min-width: 700px){
+
+}
+
+@media (min-width: 1000px){
+
+}
