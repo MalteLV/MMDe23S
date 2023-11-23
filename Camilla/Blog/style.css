@@ -3,7 +3,7 @@
 .tape{
   display: none;
 }
-h4{
+p{
   font-size: 19px;
   line-height: 1.9;
 }
@@ -49,6 +49,24 @@ h4{
   min-width: 100px;
   text-align: center;
   justify-self: center;
+  transition: transform 0.3s ease-in-out;
+}
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20%,
+  60% {
+    transform: rotate(1deg);
+  }
+  40%,
+  80% {
+    transform: rotate(-1deg);
+  }
+}
+.frontpagePost:hover {
+  animation: swing 1.2s ease;
 }
 .frontpagePost__img {
   max-width: 100%;
@@ -99,8 +117,9 @@ h4{
   width: 300px;
   border: solid 5px white;
   position: absolute;
-  max-width: 150px;
+  max-width: 90px;
 }
+
 
 body {
   margin: 0;
@@ -109,6 +128,12 @@ body {
 }
 
 .hero__text {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animation: bounce 2s linear infinite;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0;
@@ -118,7 +143,7 @@ body {
   font-family: "Covered By Your Grace", cursive;
   font-family: "Jacques Francois", serif;
   font-family: "La Belle Aurore", cursive;}
-  #i1,
+#i1,
 #i2,
 #i3,
 #i4,
@@ -214,6 +239,10 @@ body {
     display: flex;
     justify-content: center;
     margin: 10px 0 0 0;
+    animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: heartBeat 2s linear infinite;
+    overflow: hidden;
   }
   .footer__description{
     display: none;
@@ -237,6 +266,7 @@ body {
   }
   .post--small {
     transform: rotate(0);
+    
   }
   .post--rotateLeft {
     transform: rotate(0);
@@ -317,21 +347,21 @@ body {
   opacity: 0.5;
   transform: rotate(-50deg);
 }
-.tape--left {
-  right: 13vmin;
-  top: -3vmin;
-}
-.tape--right {
-  right: 13vmin;
-  top: -3vmin;
-  transform: rotate(40deg);
-}
 .menu__burger {
   display: none;
 }
 
 .footer {
   grid-column: span 3;
+}
+.tape--left {
+  right: 105vmin;
+  top: 18vmin;
+}
+.tape--right {
+  right: 10vmin;
+  top: 18vmin;
+  transform: rotate(40deg);
 }
 
 }
@@ -348,6 +378,15 @@ body {
   }
   .menu__link{
     font-size: 30px;
+  }
+  .tape--left {
+    right: 13vmin;
+    top: -3vmin;
+  }
+  .tape--right {
+    right: 13vmin;
+    top: -3vmin;
+    transform: rotate(40deg);
   }
   
 }

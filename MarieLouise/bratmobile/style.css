@@ -1,0 +1,186 @@
+body {
+  background-image: url(images/backgroundImageWide.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  align-items: center;
+  height: 30vh;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.header{
+  display: grid;
+  place-content: center;
+}
+
+/* Her er selve boblen */
+.bubble {
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+  width: 300px;
+  background: #eb9fff;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: #000;
+  z-index: 1;
+  top: 18%;
+  left: 30%;
+  display: none;
+}
+
+/* Her er den lille trekant i */
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 25px solid #eb9fff;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #eb9fff;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}
+.polaroid__image {
+  max-width: 100%;
+  margin-inline: auto;
+}
+.polaroid {
+  background-color: white;
+  padding: 10px 10px 20px 10px;
+  box-shadow: 5px 10px 27px rgba(0, 0, 0, 0.5);
+  width: 10rem;
+  margin-top: 10%;
+  margin-left: 8%;
+  transform: rotate(-5deg);
+}
+.polaroid--two {
+  transform: rotate(5deg);
+  margin-left: 45%;
+}
+.polaroid__description {
+  margin-top: 25px;
+  text-align: center;
+}
+.logoImage {
+  position: relative;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.polaroid__one {
+  background-color: rgb(250, 250, 250);
+  height: 12rem;
+  width: 12rem;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 1;
+  top: 4rem;
+}
+.polaroid__container:hover > .bubble {
+  opacity: 1;
+}
+
+.albumCover{
+  max-width: 220px;
+  position: relative;
+  z-index: 5;
+}
+
+
+.allVinyls{
+  display: grid;
+  gap: 4rem;
+  margin: 4rem ;
+}
+
+
+
+.vinyl{
+  position: relative;
+  max-width: 185px;
+  left: 27px;
+  top: -208px;
+  z-index: 1;
+}
+
+.vinylAlbum{
+height: 230px;
+}
+
+
+.vinylAlbum:hover > .vinyl{
+  animation: spin 2s forwards;
+}
+@keyframes spin{
+  from{
+      transform: rotate(0deg);
+      left: 27px;
+  }
+  to{
+      transform: rotate(360deg);
+      left: 124px;
+  }
+}
+
+.albumCover--1{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
+    0 0 40px #51ca0b, 0 0 50px #0C7A11;
+}
+
+.vinyl--1{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0C7A11, 0 0 20px #0C7A11,
+    0 0 40px #51ca0b, 0 0 50px #0C7A11;
+  border-radius: 50%;
+}
+
+.albumCover--2{ 
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
+    0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
+}
+
+.vinyl--2{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #EF0D0D, 0 0 20px #EF0D0D,
+    0 0 40px #EF0D0D, 0 0 50px #EF0D0D;
+  border-radius: 50%;
+}
+.albumCover--3{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
+    0 0 40px #E36BAC, 0 0 50px #E36BAC;
+}
+
+.vinyl--3{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #E36BAC, 0 0 20px #E36BAC,
+    0 0 40px #E36BAC, 0 0 50px #E36BAC;
+  border-radius: 50%;
+}
+
+.albumCover--4{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
+    0 0 40px #A9E61A, 0 0 50px #A9E61A;
+}
+
+.vinyl--4{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #A9E61A, 0 0 20px #A9E61A,
+    0 0 40px #A9E61A, 0 0 50px #A9E61A;
+  border-radius: 50%;
+}
+
+.albumCover--5{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
+    0 0 40px #ffffff, 0 0 50px #ffffff;
+}
+
+.vinyl--5{
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
+    0 0 40px #ffffff, 0 0 50px #ffffff;
+  border-radius: 50%;
+}
