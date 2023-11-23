@@ -1,3 +1,7 @@
+/* front page*/
+img{
+    max-width: 100%;
+}
 body{
     margin: 0;
 }
@@ -27,7 +31,6 @@ body{
 .image__crowd {
     z-index: 1; /* Stack behind band */
     max-width: 100%;
-    margin-top: -px;
 }
 
 .image__logo {
@@ -45,7 +48,156 @@ body{
 .funky{
     max-width: 100%;
 }
+/*album scroller*/
+.albumScroller {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    background-color: black;
+    padding: 100px;
+  }
+  .albumScroller__Images--first {
+    margin-left: 15%;
+  }
+  .albumScroller__Images--last {
+    margin-right: 15%;
+  }
+  .albumScroller__Images {
+    width: 100%;
+    height: auto;
+  
+    -webkit-box-reflect: below 0.5em
+      linear-gradient(rgb(0 0 0 / 0), rgba(0, 0, 0, 0.35));
+    animation: highlight linear both;
+    animation-timeline: view(x);
+    animation-range: cover 0% cover 100%;
+  }
+  @keyframes highlight {
+    entry 0% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    entry 40% {
+      opacity: 1;
+    }
+    entry 100% { 
+      transform: scale(1);
+    }
+    exit 0% {
+      transform: scale(1);
+    }
+    exit 60% {
+      opacity: 1;
+    }
+    exit 100% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
 
+}
+.louie{
+    background-color: #A4C29C;
+    height: 852px;
+}
+.louie__logo{
+    width: 332px;
+    margin: auto;
+    display: block;
+    padding-top: 1rem;
+}
+.louie__scrolling{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.louie__trompet{
+    width: 241px;
+}
+.louie__albumName{
+    display: flex;
+    justify-content: center;
+}
+
+
+.louie__scrolling {
+    background: #F3F1C7;
+    height: 125px;
+    transform: skewY(+8deg);
+    border-top:6px solid #C4563E;
+    border-bottom:6px solid #C4563E;
+    outline:6px solid #010101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Irish Grover, sans-serif;
+    font-size: 32px;
+  }
+  .bbvd--red{
+    color: #C4563E;
+  }
+  .bbvd--black{
+    color: #010101;
+  }
+
+  .louie__albumName{
+    background: #F3F1C7;
+    height: 125px;
+    transform: skewY(-8deg);
+    border-top:6px solid #C4563E;
+    border-bottom:6px solid #C4563E;
+    outline:6px solid #010101;
+    display: flex;
+    align-items: center;
+    font-family: Irish Grover, sans-serif;
+    font-size: 48px;
+    margin: 0;
+  }
+  .louie__scrolling2{
+    margin-top: 1rem;
+  }
+  .word1 {
+    color: #C4563E; /* Set the color for the first word */
+}
+.word2 {
+    color: black; /* Set the color for the second word */
+}
+.word3 {
+    color: #C4563E; /* Set the color for the third word */
+}
+.christmas{
+    background-color: #ca1615;
+    position: relative;
+    background-image: url('/images/christmastree.png');
+    background-size: cover; 
+    background-position: center;
+}
+.christmas__img--lights{
+    max-width: 100%;
+
+}
+.christmas__img{
+    display: block;
+    margin-inline: auto;
+}
+.christmas__img--intro{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.christmas__img--band{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 60px;
+}
+.christmas__img--poster{
+    width: 90%;
+    padding: 10px;
+}
+.christmas__img--tree{
+    display: none;
+}
 @media (min-width: 700px){
 .videos{
     display: grid;
@@ -57,8 +209,15 @@ body{
 .funky{
     grid-column: span 2;
 }
+.albumScroller__Images {
+    width: 50%;
+    height: auto;
+  }
 }
 
 @media (min-width: 1000px){
-
+    .albumScroller__Images {
+        width: 40%;
+        height: auto;
+      }
 }
