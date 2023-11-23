@@ -47,7 +47,16 @@ body{
 }
 
 @media (min-width: 700px){
-
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.clickable-image{
+    grid-column: span 2;
+}
+.funky{
+    grid-column: span 2;
+}
 }
 
 @media (min-width: 1000px){
