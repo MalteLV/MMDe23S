@@ -1,0 +1,487 @@
+/* front page*/
+img{
+    max-width: 100%;
+}
+body{
+    margin: 0;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image__band {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+}
+
+.image__crowd {
+    z-index: 1;
+    max-width: 100%;
+}
+
+.image__logo {
+    z-index: 2;
+    max-width: 60%;
+    margin-top: 10px;
+}
+
+.clickable-image {
+    height: auto; 
+    cursor: pointer;
+    max-width: 100%;
+    padding-top: 4px;
+}
+.funky{
+    max-width: 100%;
+}
+
+
+/*album scroller*/
+.albumScroller {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    background-color: black;
+    padding: 100px;
+  }
+  .albumScroller__Images--first {
+    margin-left: 15%;
+  }
+  .albumScroller__Images--last {
+    margin-right: 15%;
+  }
+  .albumScroller__Images {
+    width: 100%;
+    height: auto;
+  
+    -webkit-box-reflect: below 0.5em
+      linear-gradient(rgb(0 0 0 / 0), rgba(0, 0, 0, 0.35));
+    animation: highlight linear both;
+    animation-timeline: view(x);
+    animation-range: cover 0% cover 100%;
+  }
+  @keyframes highlight {
+    entry 0% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    entry 40% {
+      opacity: 1;
+    }
+    entry 100% { 
+      transform: scale(1);
+    }
+    exit 0% {
+      transform: scale(1);
+    }
+    exit 60% {
+      opacity: 1;
+    }
+    exit 100% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+}
+/* black and white page */
+.blackWhite {
+  background-color: black;
+  border-style: double;
+  border-width: 15px;
+  border-color: #fffac4;
+}
+.blackWhite__logo {
+  width: 100%;
+  margin: auto;
+}
+.blackWhite__image{
+  width: 100%;
+}
+.blackWhite__video {
+  width: 100%;
+}
+.blackWhite__scrolling{
+  display: none;
+}
+@media (min-width: 700px){
+  .blackWhite__still{
+    display: none;
+  }
+  .blackWhite__scrolling{
+    display: block;
+  }
+  .blackWhite__logo {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+.blackWhite {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.blackWhite__image {
+  width: 45%;
+  object-fit: cover;
+  padding: 0.5rem;
+}
+
+.image-container--first {
+  display: flex;
+  animation: scroll--first 50s linear infinite;
+}
+
+@keyframes scroll--first {
+  0% {
+      transform: translateX(-25%);
+  }
+  100% {
+      transform: translateX(-300%);
+  }
+}
+
+.image-container--second {
+  display: flex;
+  animation: scroll--second 50s linear infinite;
+}
+@keyframes scroll--second {
+  0% {
+      transform: translateX(-300%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+.image-container--third {
+  display: flex;
+  animation: scroll--third 50s linear infinite;
+}
+@keyframes scroll--third {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-300%);
+  }
+}
+}
+ 
+@media (min-width: 1000px){
+  .blackWhite__image {
+    width: 35%;
+  }
+}
+/*louie louie louie album page*/
+.louie{
+    background-color: #A4C29C;
+    height: 852px;
+    border-style: double;
+    border-width: 15px;
+    border-color: #010101;
+}
+.louie__logo{
+    width: 332px;
+    margin: auto;
+    display: block;
+    padding-top: 1rem;
+}
+.louie__scrolling{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.louie__trompet{
+    width: 241px;
+}
+.louie__albumName{
+    display: flex;
+    justify-content: center;
+}
+
+.louie__scrolling {
+    background: #F3F1C7;
+    height: 125px;
+    transform: skewY(+8deg);
+    border-top:6px solid #C4563E;
+    border-bottom:6px solid #C4563E;
+    box-shadow: 0 6px 0 #000, 0 -6px 0 #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Irish Grover, sans-serif;
+    font-size: 32px;
+    overflow: hidden;
+  }
+  .louie__text {
+    white-space: nowrap;
+    animation: scroll--continuous 20s linear infinite;
+  }
+  
+  @keyframes scroll--continuous {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .bbvd--red{
+    color: #C4563E;
+  }
+  .bbvd--black{
+    color: #010101;
+  }
+
+  .louie__albumName{
+    background: #F3F1C7;
+    height: 125px;
+    transform: skewY(-8deg);
+    border-top:6px solid #C4563E;
+    border-bottom:6px solid #C4563E;
+    box-shadow: 0 6px 0 #000, 0 -6px 0 #000;
+    display: flex;
+    align-items: center;
+    font-family: Irish Grover, sans-serif;
+    font-size: 48px;
+    margin: 0;
+  }
+  .louie__scrolling2{
+    margin-top: 1rem;
+  }
+  .word1 {
+    color: #C4563E;
+}
+.word2 {
+    color: black;
+}
+.word3 {
+    color: #C4563E;
+}
+
+
+/*chistmas page*/
+/*
+.christmas{
+    background-color: #ca1615;
+    position: relative;
+    background-image: url('/images/christmastree.png');
+    background-size: cover; 
+    background-position: center;
+}
+.christmas__img--lights{
+    max-width: 100%;
+
+}
+.christmas__img{
+    display: block;
+    margin-inline: auto;
+}
+.christmas__img--intro{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.christmas__img--band{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 60px;
+}
+.christmas__img--poster{
+    width: 90%;
+    padding: 10px;
+}
+.christmas__img--tree{
+    display: none;
+}
+@media (min-width: 700px){
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.clickable-image{
+    grid-column: span 2;
+}
+.funky{
+    grid-column: span 2;
+}
+.albumScroller__Images {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1000px){
+    .albumScroller__Images {
+        width: 40%;
+        height: auto;
+      }
+}
+*/
+
+.christmas{
+  background: linear-gradient(172deg, #971809 0%, #CA1615 100%);
+  position: relative;
+  border-style: double;
+  border-width: 15px;
+  border-color: #fff;
+}
+.christmas__lights--first{
+  position: absolute;
+}
+.christmas__logo{
+  width: 80%;
+  display: block;
+  margin-left: 20%;
+  padding-top: 3rem;
+}
+.animateButton{
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  font: inherit;
+}
+.christmas__snowglobe{
+  transform: rotate(-15deg);
+  width: 50%;
+  padding-left: 10%;
+  position: absolute;
+}
+.christmas__lights--second{
+  padding-top: 50%;
+}
+
+/*https://codepen.io/BunBoo/pen/JjyNmBO*/
+.snow {
+  display: none;
+  opacity: 60%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 120%;
+  height: 100%;
+  pointer-events: none;
+  animation: snow-direction cubic-bezier(2, 0, 2, 1) 4s both alternate infinite;
+}
+
+@keyframes snow-direction {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    transform: translateX(10%);
+  }
+}
+.snow:before,
+.snow:after {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: snow 10s linear infinite;
+  box-shadow:
+    -5vw 10vh #fff,
+    30vw 5vh #fff,
+    55vw 5vh #fff,
+    75vw 10vh #fff,
+    105vw 15vh #fff,
+    -10vw 30vh #fff,
+    40vw 25vh #fff,
+    60vw 20vh #fff,
+    90vw 25vh #fff,
+    20vw 40vh #fff,
+    5vw 45vh #fff,
+    65vw 45vh #fff,
+    105vw 40vh #fff,
+    50vw 50vh #fff,    
+    30vw 50vh #fff,
+    10vw 55vh #fff,
+    20vw 60vh #fff,
+    40vw 65vh #fff,
+    60vw 60vh #fff,
+    80vw 65vh #fff,
+    5vw 70vh #fff,
+    30vw 75vh #fff,
+    55vw 85vh #fff,
+    75vw 80vh #fff,
+    105vw 75vh #fff,
+    20vw 90vh #fff,
+    -5vw 95vh #fff,
+    65vw 95vh #fff,
+    100vw 90vh #fff,
+    
+    -5vw 110vh #fff,
+    30vw 105vh #fff,
+    55vw 105vh #fff,
+    75vw 110vh #fff,
+    105vw 115vh #fff,
+    -10vw 130vh #fff,
+    40vw 125vh #fff,
+    60vw 120vh #fff,
+    90vw 125vh #fff,
+    20vw 140vh #fff,
+    5vw 145vh #fff,
+    65vw 145vh #fff,
+    105vw 140vh #fff,
+    50vw 150vh #fff,    
+    30vw 150vh #fff,
+    10vw 155vh #fff,
+    20vw 160vh #fff,
+    40vw 165vh #fff,
+    60vw 160vh #fff,
+    80vw 165vh #fff,
+    5vw 170vh #fff,
+    30vw 175vh #fff,
+    55vw 185vh #fff,
+    75vw 180vh #fff,
+    105vw 175vh #fff,
+    20vw 190vh #fff,
+    -5vw 195vh #fff,
+    65vw 195vh #fff,
+    100vw 190vh #fff;
+}
+
+.snow:after {
+  position: absolute;
+  left: 50px;
+  top: 60px;
+  animation-duration: 6s;
+  width: 8px;
+  height: 8px;
+  opacity: 0.7;
+  filter: blur(3px);
+}
+
+@keyframes snow {
+  from {
+    transform: rotate(10deg) translateY(-100vh);
+  }
+  to {
+    transform: rotate(10deg) translateY(0);
+  }
+}
