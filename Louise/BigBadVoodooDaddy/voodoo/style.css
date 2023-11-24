@@ -228,6 +228,22 @@ margin-top: 300px;
     font-family: 'Raleway', sans-serif;
   color: #000;		
   }
+
+  .scooby{
+    background-color: #000;
+  }
+  .scooby__text{
+    color: white;
+    font-size: 50px;
+    font-family: Creepster;
+    transform: translate(-50%, -50%);
+    display: inline;
+  }
+  .scooby__img{
+    max-width: 90%;
+    padding: 10px;
+    align-items: center;
+  }
 @media (min-width: 700px){
 .videos{
     display: grid;
