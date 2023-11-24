@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Lato:wght@700&display=swap");
+/*index*/
+.indexBody {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+p {
+  /*font-family: "DM Sans", sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* header*/
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("Image-edit/bannerBackgroundImage_6jnqc3jx6ma91.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  padding: 5px 5px 5px 5px;
+  animation: headerHide linear both;
+  animation-timeline: view(block);
+  animation-range: cover 99% cover 100%;
+}
+@keyframes headerHide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+.header__socials {
+  display: flex;
+  gap: 5px;
+  padding-right: 7px;
+}
+/*list marker*/
+ul {
+  list-style-type: none;
+}
+/* Index */
+/* Hero */
+.hero {
+  position: relative;
+}
+.hero__heading {
+  position: absolute;
+  bottom: 10%;
+  animation: headingHide linear both;
+  animation-timeline: view(block);
+  animation-range: cover 70% cover 100%;
+}
+@keyframes headingHide {
+  from {
+    opacity: 1;
+    transform: translate(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+.hero__image {
+}
+.hero__link {
+  display: block;
+  text-align: center;
+  padding: 5px 20px;
+  background-color: red;
+  width: 80px;
+  height: 20px;
+}
+/* index heros sizing */
+.index__heros {
+  max-width: 100%;
+  height: auto;
+}
+/* Index Tour Dates hero*/
+.tourDates {
+  display: flex;
+  position: relative;
+}
+.tourDates__image {
+  opacity: 0.5;
+  transition: 1s ease;
+}
+.tourDates__image:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+.tourDates__heading {
+}
+.tourDates__link {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+  max-width: 100%;
+}
+/* Index  The Band */
+.band {
+  display: flex;
+  position: relative;
+}
+.band__hero {
+  opacity: 0.5;
+  transition: 1s ease;
+}
+.band__hero:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+.band__heading {
+}
+.band__linkHero {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+  max-width: 100%;
+}
+/* Index The Music */
+.music {
+  display: flex;
+  position: relative;
+}
+.music__hero {
+  opacity: 0.5;
+  transition: 1s ease;
+}
+.music__hero:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+.music__heading {
+}
+.music__linkHero {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+  max-width: 100%;
+}
+/* Index gallery */
+.indexgallery {
+  display: flex;
+  position: relative;
+}
+.indexgallery__hero {
+  opacity: 0.5;
+  transition: 1s ease;
+}
+.indexgallery__hero:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+.indexgallery__heading {
+}
+.indexgallery__linkHero {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+  max-width: 100%;
+}
+/*Tour_date*/
+/*Tour_dateBody*/
+.tour_dateBody {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+/* tour */
+.tour {
+  display: flex;
+  position: relative;
+}
+.tour__hero {
+  max-width: 100%;
+  filter: brightness(70%);
+  transition: 1s ease;
+}
+.tour__hero:hover {
+  filter: brightness(100%);
+  transition: 1s ease;
+}
+.tour__heading {
+}
+.tour__link {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+  max-width: 100%;
+}
+.tourMain__tour {
+  font-family: "DM Sans", sans-serif;
+}
+.monthList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  text-align: left;
+}
+.monthList__datesPlace {
+}
+
+.monthList__ticket-black {
+  color: #ffffff;
+  background: #000000;
+  text-decoration: none;
+  border: none;
+  padding: 2px 6px 3px;
+}
+.monthList__ticket-red {
+  color: #e50303;
+  border: 1px solid #e50303;
+  background: #ffffff;
+  padding: 2px 6px 3px;
+  text-decoration: none;
+}
+/* tour main */
+.tourMain {
+  padding: 0px 10px 5px 5px;
+}
+/* The Band */
+.bandBody {
+  margin: 0;
+  padding: 0;
+}
+.bandMain {
+  padding: 10px;
+  font-family: "DM Sans", sans-serif;
+}
+.bandHeadline {
+  text-align: center;
+  font-size: 1rem;
+}
+.bandCredit {
+  text-align: center;
+}
+.bandImage {
+  max-width: 100%;
+  height: auto;
+  animation: linear bandImagereveal both;
+  animation-timeline: view(block);
+  animation-range: entry 25% cover 30%;
+}
+@keyframes bandImagereveal {
+  0% {
+    opacity: 0;
+    clip-path: inset(45% 20% 45% 20%);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+.bandTextgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.band__imageSet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+/*The Music*/
+/*the music body*/
+.musicBody {
+  margin: 0;
+  padding: 0;
+}
+.musicMain {
+  background-color: #000000;
+  color: white;
+}
+.musicMain__hero {
+  max-width: 100%;
+  height: auto;
+}
+.lastestCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border: #545454 solid 5px;
+}
+.lastestCard__image {
+  max-width: 100%;
+  height: auto;
+}
+.lastestCard__heading {
+  font-family: "DM Sans", sans-serif;
+}
+.lastestCard__headline {
+  font-size: 1.5rem;
+}
+.lastestCard__link {
+  color: #ffffff;
+  background: #000000;
+  text-decoration: none;
+  border: none;
+  padding: 2px 6px 3px;
+  border: #ffffff solid 2px;
+  font-size: 0.8rem;
+}
+/*Album Alignment*/
+.albumAlignment {
+  display: grid;
+  justify-items: center;
+}
+.newerAlbums {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 10px;
+}
+.newerAlbums__image {
+  max-width: 100%;
+  height: auto;
+}
+.olderAlbums {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 10px;
+}
+.olderAlbums__image {
+  max-width: 100%;
+  height: auto;
+}
+/*Gallery*/
+.bodyGallery {
+  margin: 0;
+  padding: 0;
+}
+.mainGallery {
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+  padding: 30px;
+}
+.gallery__image {
+  max-width: 100%;
+  height: auto;
+}
+/* footer */
+.footer {
+  background-image: url("Image-edit/bannerBackgroundImage_6jnqc3jx6ma91-footer.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+}
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 14px;
+}
+.footer__twitter {
+}
+.footer__facebook {
+}
+.footer__instagram {
+}
+/*Adaptive*/
+@media (min-width: 640px) {
+  .newerAlbums {
+    grid-template-columns: 1fr 1fr;
+  }
+  .olderAlbums {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .bandHeadline {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  .header__socials {
+    opacity: 0;
+  }
+}
