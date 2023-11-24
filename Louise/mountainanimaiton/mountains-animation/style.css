@@ -37,6 +37,12 @@ body {
     padding: 1.3rem;
     color: #161C31;
     margin-bottom: 4rem;
+    animation-timeline: view(block);
+    animation-range: entry 10% cover 40%;
+}
+.article:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
 }
 
 .article {
@@ -75,6 +81,7 @@ body {
     transition: transform 2s, background-color 2s;
 }
 
+
 /* two columns */
 @media screen and (min-width: 700px) {
     .articles {
@@ -112,3 +119,7 @@ body {
         }
     }
 }
+.animate__animated.animate__bounceInUp {
+    --animate-duration: 2s;
+  }
+  

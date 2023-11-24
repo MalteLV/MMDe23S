@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+}
+.louie {
+  background-color: #a4c29c;
+}
+.louie__logo {
+  width: 332px;
+  margin: auto;
+  display: block;
+  padding-top: 1rem;
+}
+.louie__scrolling {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.louie__text {
+}
+.soundImage {
+  position: relative;
+}
+
+.soundImage__image {
+  width: 241px;
+  margin-left: 5%;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.soundImage__image.playing {
+  animation: rotate 0.5s linear infinite alternate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.louie__albumName {
+  display: flex;
+  justify-content: center;
+}
+
+.louie__scrolling {
+  background: #f3f1c7;
+  height: 125px;
+  transform: skewY(+8deg);
+  border-top: 6px solid #c4563e;
+  border-bottom: 6px solid #c4563e;
+  outline: 6px solid #010101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Irish Grover, sans-serif;
+  font-size: 32px;
+}
+
+.louie__albumName {
+  background: #f3f1c7;
+  height: 125px;
+  transform: skewY(-8deg);
+  border-top: 6px solid #c4563e;
+  border-bottom: 6px solid #c4563e;
+  outline: 6px solid #010101;
+  display: flex;
+  align-items: center;
+  font-family: Irish Grover, sans-serif;
+  font-size: 48px;
+  margin: 0;
+}
+.louie__scrolling2 {
+  margin-top: 1rem;
+  margin-bottom: 10%;
+}
+.word1 {
+  color: #c4563e; /* Set the color for the first word */
+}
+.word2 {
+  color: black; /* Set the color for the second word */
+}
+.word3 {
+  color: #c4563e; /* Set the color for the third word */
+}
+/*.button {
+  background: #f3f1c7;
+  font-family: Irish Grover, sans-serif;
+  font-size: 48px;
+  border: 6px solid #c4563e;
+  outline: 6px solid #010101;
+}*/
+
+@media (min-width: 700px) {
+}
+
+@media (min-width: 1000px) {
+}
