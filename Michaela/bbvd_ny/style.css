@@ -1,54 +1,83 @@
 /* front page*/
 img{
-    max-width: 100%;
+  max-width: 100%;
 }
 body{
-    margin: 0;
+  margin: 0;
 }
 .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+ 
 }
 
 .image-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image__band {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  top: 0;
 }
 
 .image__crowd {
-    z-index: 1;
-    max-width: 100%;
+  z-index: 1; /* Stack behind band */
+  max-width: 100%;
 }
 
 .image__logo {
-    z-index: 2;
-    max-width: 60%;
-    margin-top: 10px;
+  z-index: 2; /* Stack in front of band */
+  max-width: 60%;
+  margin-top: 10px;
 }
 
 .clickable-image {
-    height: auto; 
-    cursor: pointer;
-    max-width: 100%;
-    padding-top: 4px;
+  height: auto;
+  cursor: pointer;
+  max-width: 100%;
+  padding-top: 4px;
 }
 .funky{
-    max-width: 100%;
+  max-width: 100%;
 }
 
+@media (min-width: 700px){
+  .videos{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+  .clickable-image{
+      grid-column: span 2;
+  }
+  .funky{
+      grid-column: span 2;
+  }
+  .albumScroller__Images {
+      width: 50%;
+      height: auto;
+    }
+    .image__logo{
+      max-width: 50%;
+    }
+  }
+   
+  @media (min-width: 1000px){
+      .albumScroller__Images {
+          width: 40%;
+          height: auto;
+        }
+        .image__logo{
+          max-width: 45%;
+        }
+  }
 
 /*album scroller*/
 .albumScroller {
@@ -99,9 +128,9 @@ body{
 /* black and white page */
 .blackWhite {
   background-color: black;
-  border-style: double;
-  border-width: 15px;
-  border-color: #fffac4;
+  border-style: double double double double;
+  border-width: 15px 15px 15px 15px;
+  border-color: #fffac4 #fffac4 #fffac4 #fffac4;
 }
 .blackWhite__logo {
   width: 100%;
@@ -141,7 +170,7 @@ body{
 
 .image-container--first {
   display: flex;
-  animation: scroll--first 50s linear infinite;
+  animation: scroll--first 30s linear infinite;
 }
 
 @keyframes scroll--first {
@@ -167,7 +196,7 @@ body{
 }
 .image-container--third {
   display: flex;
-  animation: scroll--third 50s linear infinite;
+  animation: scroll--third 40s linear infinite;
 }
 @keyframes scroll--third {
   0% {
@@ -187,30 +216,26 @@ body{
 /*louie louie louie album page*/
 .louie{
     background-color: #A4C29C;
-    height: 852px;
-    border-style: double;
-    border-width: 15px;
+    height: 760px;
+    border-style: double double double double;
+  border-width: 15px 15px 15px 15px;
     border-color: #010101;
 }
 .louie__logo{
-    width: 332px;
+    width: 40%;
     margin: auto;
     display: block;
     padding-top: 1rem;
 }
-.louie__scrolling{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-.louie__trompet{
-    width: 241px;
-}
+
+
 .louie__albumName{
     display: flex;
     justify-content: center;
 }
 
 .louie__scrolling {
+    margin-top: 2rem;
     background: #F3F1C7;
     height: 125px;
     transform: skewY(+8deg);
@@ -258,7 +283,7 @@ body{
     margin: 0;
   }
   .louie__scrolling2{
-    margin-top: 1rem;
+    height: 0px;
   }
   .word1 {
     color: #C4563E;
@@ -269,7 +294,46 @@ body{
 .word3 {
     color: #C4563E;
 }
+.soundImage {
+  position: relative;
+  display: inline;
+}
+.soundImage__image {
+  width: 35%;
+  margin-left: 5%;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+ 
+.soundImage__image.playing {
+  animation: rotate 0.5s linear infinite alternate;
+}
+ 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@media (min-width: 700px){
+  .louie{
+    height: 900px;
+}
+.soundImage__image{
+  width: 30%;
+}
 
+  }
+  @media (min-width: 1000px){
+    .louie{
+      height: 1100px;
+  }
+  .soundImage__image{
+    width: 25%;
+  }
+  }
 
 /*chistmas page*/
 /*
@@ -367,6 +431,11 @@ body{
 }
 .christmas__lights--second{
   padding-top: 50%;
+}
+.christmas__tree{
+}
+.christmas__wolf{
+  transform: scaleX(-1);
 }
 
 /*https://codepen.io/BunBoo/pen/JjyNmBO*/
