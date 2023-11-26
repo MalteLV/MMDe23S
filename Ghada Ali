@@ -84,6 +84,9 @@
 
 </html>
 
+CSS DELEN 
+
+
 body {
     height: 100%;
     background-image: url(record.jpg);
