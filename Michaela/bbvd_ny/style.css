@@ -231,18 +231,19 @@ body{
   display: inline;
   color: white;
   font-family: Josefin Sans;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .scooby__img{
   max-width: 90%;
   padding: 10px;
   align-items: center;
+  margin-left: 7px;
 }
 .scooby__img:hover {
   animation: shakeX 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
 }
-.scooby__img--video{
-  margin-left: 21px;
-}
+
 @keyframes shakeX {
   0%,
   100% {
@@ -265,9 +266,6 @@ body{
     }
     .scooby__info{
       grid-column: span 2;
-    }
-    .scooby__img--video{
-      margin-left: 9px;
     }
   }
   @media (min-width: 1000px){
