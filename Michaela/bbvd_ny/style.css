@@ -60,20 +60,12 @@ body{
   .funky{
       grid-column: span 2;
   }
-  .albumScroller__Images {
-      width: 50%;
-      height: auto;
-    }
     .image__logo{
       max-width: 50%;
     }
   }
    
   @media (min-width: 1000px){
-      .albumScroller__Images {
-          width: 40%;
-          height: auto;
-        }
         .image__logo{
           max-width: 45%;
         }
@@ -125,6 +117,19 @@ body{
       transform: scale(0.7);
     }
 }
+@media (min-width: 700px){
+  .albumScroller__Images {
+      width: 50%;
+      height: auto;
+    }
+  }
+   
+  @media (min-width: 1000px){
+      .albumScroller__Images {
+          width: 40%;
+          height: auto;
+        }
+  }
 /* black and white page */
 .blackWhite {
   background-color: black;
@@ -213,6 +218,7 @@ body{
     width: 35%;
   }
 }
+
 /*scooby doo*/
 .scooby{
   background-color: #000;
@@ -399,67 +405,6 @@ body{
   }
 
 /*chistmas page*/
-/*
-.christmas{
-    background-color: #ca1615;
-    position: relative;
-    background-image: url('/images/christmastree.png');
-    background-size: cover; 
-    background-position: center;
-}
-.christmas__img--lights{
-    max-width: 100%;
-
-}
-.christmas__img{
-    display: block;
-    margin-inline: auto;
-}
-.christmas__img--intro{
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.christmas__img--band{
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    margin-top: 60px;
-}
-.christmas__img--poster{
-    width: 90%;
-    padding: 10px;
-}
-.christmas__img--tree{
-    display: none;
-}
-@media (min-width: 700px){
-.videos{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.clickable-image{
-    grid-column: span 2;
-}
-.funky{
-    grid-column: span 2;
-}
-.albumScroller__Images {
-    width: 50%;
-    height: auto;
-  }
-}
-
-@media (min-width: 1000px){
-    .albumScroller__Images {
-        width: 40%;
-        height: auto;
-      }
-}
-*/
-
 .christmas{
   background: linear-gradient(172deg, #971809 0%, #CA1615 100%);
   position: relative;
