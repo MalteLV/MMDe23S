@@ -249,7 +249,9 @@ body{
 .scooby__img:hover {
   animation: shakeX 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
 }
-
+.scooby__img--video{
+  margin-left: 7.5px;
+}
 @keyframes shakeX {
   0%,
   100% {
