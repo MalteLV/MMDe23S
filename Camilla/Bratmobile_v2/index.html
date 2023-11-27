@@ -18,7 +18,7 @@
         <div class="bubble bubble__bottomLeft" contenteditable>
           "I will not be silenced and I will not let anyone distort my words"
         </div>
-        <section class="polaroids__polaroid polaroids__polaroid--1 ">
+        <section class="polaroids__polaroid polaroids__polaroid--1">
           <img
             src="images/AllisonImage.png"
             alt="billede af Allison Wolfe"
@@ -45,20 +45,19 @@
             "Know your worth; Don't undervalue your creativity"
           </p>
         </section>
-    </section>
-        <section class="polaroids__container">
-          <div class="bubble bubble__bottomLeft" contenteditable>
-            "Riot not diet"
-          </div>
-          <section class="polaroids__polaroid">
-            <img
-              src="images/ErinImage.png"
-              alt="billede af Erin Smith"
-              class="polaroids__polaroidImage"
-            />
-            <p class="polaroids__header">Erin Smith</p>
-            <p class="polaroids__description">"Riot not diet"</p>
-          </section>
+      </section>
+      <section class="polaroids__container">
+        <div class="bubble bubble__bottomLeft" contenteditable>
+          "Riot not diet"
+        </div>
+        <section class="polaroids__polaroid">
+          <img
+            src="images/ErinImage.png"
+            alt="billede af Erin Smith"
+            class="polaroids__polaroidImage"
+          />
+          <p class="polaroids__header">Erin Smith</p>
+          <p class="polaroids__description">"Riot not diet"</p>
         </section>
       </section>
     </section>
@@ -143,32 +142,67 @@
     <!--Audio Script for hover-->
     <script>
       var soundOne = $("#girlsGetBusy")[0];
-      $(".vinyls__albumCover--girlsGetBusy").mouseenter(function () {
+      var albumCover = $(".vinyls__albumCover--girlsGetBusy");
+
+      albumCover.mouseenter(function () {
         soundOne.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundOne.pause();
+        soundOne.currentTime = 0; // Rewind to the beginning of the audio
       });
     </script>
     <script>
       var soundTwo = $("#ladies")[0];
-      $(".vinyls__albumCover--ladies").mouseenter(function () {
+      var albumCover = $(".vinyls__albumCover--ladies");
+
+      albumCover.mouseenter(function () {
         soundTwo.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundTwo.pause();
+        soundTwo.currentTime = 0; // Rewind to the beginning of the audio (optional)
       });
     </script>
     <script>
       var soundThree = $("#pottymouth")[0];
-      $(".vinyls__albumCover--pottymouth").mouseenter(function () {
+      var albumCover = $(".vinyls__albumCover--pottymouth");
+
+      albumCover.mouseenter(function () {
         soundThree.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundThree.pause();
+        soundThree.currentTime = 0; // Rewind to the beginning of the audio (optional)
       });
     </script>
     <script>
       var soundFour = $("#realJanelle")[0];
-      $(".vinyls__albumCover--realJanelle").mouseenter(function () {
+      var albumCover = $(".vinyls__albumCover--realJanelle");
+
+      albumCover.mouseenter(function () {
         soundFour.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundFour.pause();
+        soundFour.currentTime = 0; // Rewind to the beginning of the audio (optional)
       });
     </script>
     <script>
       var soundFive = $("#thePeel")[0];
-      $(".vinyls__albumCover--thePeel").mouseenter(function () {
+      var albumCover = $(".vinyls__albumCover--thePeel");
+
+      albumCover.mouseenter(function () {
         soundFive.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundFive.pause();
+        soundFive.currentTime = 0; // Rewind to the beginning of the audio (optional)
       });
     </script>
   </body>
