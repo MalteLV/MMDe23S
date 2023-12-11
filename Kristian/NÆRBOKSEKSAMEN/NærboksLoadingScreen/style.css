@@ -38,7 +38,7 @@ body {
   }
 }
 
-.maillady {
+.frontPage__image {
   width: 300px;
   transform: scaleX(-1);
   position: fixed;
