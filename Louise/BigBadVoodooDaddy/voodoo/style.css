@@ -231,19 +231,43 @@ margin-top: 300px;
 
   .scooby{
     background-color: #000;
+    display: flex;
+    display: grid;
+    place-items: center;
   }
   .scooby__text{
     color: white;
     font-size: 50px;
     font-family: Creepster;
-    transform: translate(-50%, -50%);
     display: inline;
+    margin-inline: auto;
+  }
+  .scooby__info{
+    display: inline;
+    color: white;
+    font-family: Josefin Sans;
   }
   .scooby__img{
     max-width: 90%;
     padding: 10px;
     align-items: center;
   }
+  .scooby__img:hover {
+    animation: shakeX 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+  @keyframes shakeX {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25%,
+    75% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
 @media (min-width: 700px){
 .videos{
     display: grid;
@@ -259,6 +283,18 @@ margin-top: 300px;
     width: 50%;
     height: auto;
   }
+  .image__logo{
+    max-width: 50%;
+  }
+  .scooby{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scooby__text{
+    grid-column: span 2;
+  }
+  .scooby__info{
+    grid-column: span 2;
+  }
 }
 
 @media (min-width: 1000px){
@@ -266,4 +302,16 @@ margin-top: 300px;
         width: 40%;
         height: auto;
       }
-}
+      .image__logo{
+        max-width: 45%;
+      }
+      .scooby{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .scooby__text{
+        grid-column: span 3;
+      }
+      .scooby__info{
+        grid-column: span 3;
+      }
+    }

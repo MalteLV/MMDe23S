@@ -1,54 +1,76 @@
 /* front page*/
-img{
-    max-width: 100%;
-}
 body{
-    margin: 0;
+  margin: 0;
 }
 .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  max-width: 100%;
+ 
 }
 
 .image-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image__band {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  top: 0;
 }
 
 .image__crowd {
-    z-index: 1;
-    max-width: 100%;
+  z-index: 1; /* Stack behind band */
+  max-width: 100%;
 }
 
 .image__logo {
-    z-index: 2;
-    max-width: 60%;
-    margin-top: 10px;
+  z-index: 2; /* Stack in front of band */
+  max-width: 60%;
+  margin-top: 10px;
 }
 
 .clickable-image {
-    height: auto; 
-    cursor: pointer;
-    max-width: 100%;
-    padding-top: 4px;
+  height: auto;
+  cursor: pointer;
+  max-width: 100%;
+  padding-top: 4px;
 }
 .funky{
-    max-width: 100%;
+  max-width: 100%;
 }
 
+@media (min-width: 700px){
+  .videos{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+  .clickable-image{
+      grid-column: span 2;
+  }
+  .funky{
+      grid-column: span 2;
+  }
+    .image__logo{
+      max-width: 50%;
+    }
+  }
+   
+  @media (min-width: 1000px){
+        .image__logo{
+          max-width: 45%;
+        }
+  }
+  @media (min-width: 1100px){
+    
+    }
 
 /*album scroller*/
 .albumScroller {
@@ -96,21 +118,98 @@ body{
       transform: scale(0.7);
     }
 }
+@media (min-width: 700px){
+  .albumScroller__Images {
+      width: 50%;
+      height: auto;
+    }
+  }
+   
+  @media (min-width: 1000px){
+      .albumScroller__Images {
+          width: 40%;
+          height: auto;
+        }
+  }
+/*scooby doo*/
+.scooby{
+  background-color: #000;
+  display: flex;
+  display: grid;
+  place-items: center;
+}
+.scooby__text{
+  color: white;
+  font-size: 50px;
+  font-family: Creepster;
+  text-align: center;
+}
+.scooby__info{
+  display: inline;
+  color: white;
+  font-family: Josefin Sans;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.scooby__img{
+  max-width: 90%;
+  padding: 10px;
+  align-items: center;
+  margin-left: 7px;
+}
+.scooby__img:hover {
+  animation: shakeX 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+.scooby__img--video{
+  margin-left: 7.5px;
+}
+@keyframes shakeX {
+  0%,
+  100% {
+      transform: translateX(0);
+  }
+  25%,
+  75% {
+      transform: translateX(-10px);
+  }
+  50% {
+      transform: translateX(10px);
+  }
+}
+@media (min-width: 700px){
+    .scooby{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .scooby__text{
+      grid-column: span 2;
+    }
+    .scooby__info{
+      grid-column: span 2;
+    }
+  }
+  @media (min-width: 1000px){
+      .scooby{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .scooby__text{
+        grid-column: span 3;
+      }
+      .scooby__info{
+        grid-column: span 3;
+      }
+    }
 /* black and white page */
 .blackWhite {
   background-color: black;
-  border-style: double;
-  border-width: 15px;
-  border-color: #fffac4;
+  border-style: double double double double;
+  border-width: 15px 15px 15px 15px;
+  border-color: #fffac4 #fffac4 #fffac4 #fffac4;
 }
 .blackWhite__logo {
   width: 100%;
   margin: auto;
 }
 .blackWhite__image{
-  width: 100%;
-}
-.blackWhite__video {
   width: 100%;
 }
 .blackWhite__scrolling{
@@ -139,9 +238,9 @@ body{
   padding: 0.5rem;
 }
 
-.image-container--first {
+.blackWhite__image--first {
   display: flex;
-  animation: scroll--first 50s linear infinite;
+  animation: scroll--first 30s linear infinite;
 }
 
 @keyframes scroll--first {
@@ -153,7 +252,7 @@ body{
   }
 }
 
-.image-container--second {
+.blackWhite__image--second {
   display: flex;
   animation: scroll--second 50s linear infinite;
 }
@@ -165,9 +264,9 @@ body{
       transform: translateX(0);
   }
 }
-.image-container--third {
+.blackWhite__image--third {
   display: flex;
-  animation: scroll--third 50s linear infinite;
+  animation: scroll--third 40s linear infinite;
 }
 @keyframes scroll--third {
   0% {
@@ -184,33 +283,27 @@ body{
     width: 35%;
   }
 }
+
 /*louie louie louie album page*/
 .louie{
     background-color: #A4C29C;
-    height: 852px;
-    border-style: double;
-    border-width: 15px;
+    height: 760px;
+    border-style: double double double double;
+  border-width: 15px 15px 15px 15px;
     border-color: #010101;
 }
 .louie__logo{
-    width: 332px;
+    width: 80%;
     margin: auto;
     display: block;
     padding-top: 1rem;
-}
-.louie__scrolling{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-.louie__trompet{
-    width: 241px;
 }
 .louie__albumName{
     display: flex;
     justify-content: center;
 }
-
 .louie__scrolling {
+    margin-top: 2rem;
     background: #F3F1C7;
     height: 125px;
     transform: skewY(+8deg);
@@ -258,7 +351,7 @@ body{
     margin: 0;
   }
   .louie__scrolling2{
-    margin-top: 1rem;
+    height: 0px;
   }
   .word1 {
     color: #C4563E;
@@ -269,85 +362,153 @@ body{
 .word3 {
     color: #C4563E;
 }
-
-
-/*chistmas page*/
-/*
-.christmas{
-    background-color: #ca1615;
-    position: relative;
-    background-image: url('/images/christmastree.png');
-    background-size: cover; 
-    background-position: center;
+.soundImage {
+  position: relative;
+  display: inline;
 }
-.christmas__img--lights{
-    max-width: 100%;
-
+.soundImage__image {
+  width: 55%;
+  margin: 5%;
+  margin-left: 5%;
+  transform-origin: center;
+  transition: transform 0.3s ease;
 }
-.christmas__img{
-    display: block;
-    margin-inline: auto;
+ 
+.soundImage__image.playing {
+  animation: rotate 0.5s linear infinite alternate;
 }
-.christmas__img--intro{
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.christmas__img--band{
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    margin-top: 60px;
-}
-.christmas__img--poster{
-    width: 90%;
-    padding: 10px;
-}
-.christmas__img--tree{
-    display: none;
-}
-@media (min-width: 700px){
-.videos{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.clickable-image{
-    grid-column: span 2;
-}
-.funky{
-    grid-column: span 2;
-}
-.albumScroller__Images {
-    width: 50%;
-    height: auto;
+ 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
   }
 }
-
-@media (min-width: 1000px){
-    .albumScroller__Images {
-        width: 40%;
-        height: auto;
-      }
+@media (min-width: 420px){
+  .louie{
+    height: 800px;
 }
-*/
+}
+@media (min-width: 460px){
+  .louie{
+    height: 900px;
+}
+}
+@media (min-width: 550px){
+  .louie{
+    height: 900px;
+}
+.louie__logo{
+  width: 60%;
+}
+}
+@media (min-width: 580px){
+  .soundImage__image {
+    width: 45%;
+}
+}
+@media (min-width: 650px){
+.soundImage__image{
+  margin: 2%;
+  margin-left: 5%;
+  width: 40%;
+}
+}
+  @media (min-width: 750px){
+  .soundImage__image{
+    width: 35%;
 
+  }
+  }
+  @media (min-width: 800px){
+    .louie__logo{
+      width: 50%;
+    }
+    .soundImage__image{
+      margin: 0;
+      margin-left: 5%;
+    }
+    .louie__scrolling {
+      height: 110px;
+    }
+    .louie__albumName{
+      height: 110px;
+    }
+    }
+  @media (min-width: 900px){
+    .louie__logo{
+      width: 50%;
+    }
+    .soundImage__image{
+      width: 30%;
+    }
+    }
+  @media (min-width: 1000px){
+    .louie__logo{
+      width: 45%;
+    }
+    .soundImage__image{
+      width: 25%;
+    }
+    }
+  @media (min-width: 1100px){
+    .louie__logo{
+      width: 40%;
+    }
+    .soundImage__image{
+      width: 25%;
+    }
+    }
+  @media (min-width: 1190px){
+    .louie{
+      height: 950px;
+    }
+    .louie__logo{
+      width: 35%;
+    }
+    .soundImage__image{
+      width: 20%;
+    }
+    }
+/*chistmas page*/
 .christmas{
   background: linear-gradient(172deg, #971809 0%, #CA1615 100%);
   position: relative;
   border-style: double;
   border-width: 15px;
   border-color: #fff;
+  overflow: hidden;
+  height: 700px;
 }
 .christmas__lights--first{
+  max-width: 100%;
   position: absolute;
+  z-index: 2;
 }
 .christmas__logo{
-  width: 80%;
-  display: block;
-  margin-left: 20%;
-  padding-top: 3rem;
+  width: 75%;
+  padding-left: 25%;
+  padding-top: 2rem;
+  position: absolute;
+  z-index: 1;
+}
+.christmas__lights--second{
+  width: 130%;
+  transform: rotate(30deg);
+  padding-top: 45%;
+  z-index: 0;
+  position: absolute;
+}
+.christmas__lights--third{
+  position: absolute;
+  padding-top: 90%;
+  width: 140%;
+  z-index: 3;
+  transform: scaleX(-1);
+  transform: rotate(-5deg);
+  left: -30%;
 }
 .animateButton{
   border: none;
@@ -361,12 +522,34 @@ body{
 }
 .christmas__snowglobe{
   transform: rotate(-15deg);
-  width: 50%;
-  padding-left: 10%;
+  width: 45%;
   position: absolute;
+  padding-top: 65%;
+  z-index: 4;
 }
-.christmas__lights--second{
-  padding-top: 50%;
+.christmas__lights--fourth{
+  position: absolute;
+  padding-top: 135%;
+  width: 160%;
+  z-index: 5;
+  padding-left: 15%;
+  transform: rotate(20deg);
+}
+.christmas__tree{
+  position: absolute;
+  right: -30%;
+  width: 100%;
+  padding-top: 60%;
+  bottom: 0;
+  z-index: 6;
+}
+.christmas__wolf{
+  position: absolute;
+  transform: scaleX(-1);
+  width: 100%;
+  bottom: 0;
+  right: 10%;
+  z-index: 7;
 }
 
 /*https://codepen.io/BunBoo/pen/JjyNmBO*/
@@ -485,3 +668,184 @@ body{
     transform: rotate(10deg) translateY(0);
   }
 }
+
+@media (min-width: 380px){
+  .christmas__tree{
+    width: 90%;
+  }
+  .christmas__wolf{
+    width: 90%;
+  }
+}
+@media (min-width: 410px){
+  .christmas__tree{
+    width: 80%;
+  }
+  .christmas__wolf{
+    width: 80%;
+  }
+  .christmas__snowglobe{
+    width: 40%;
+    padding-left: 5%;
+    padding-top: 60%;
+  }
+  .christmas__logo{
+    padding-left: 30%;
+    width: 65%;
+  }
+}
+@media (min-width: 450px){
+  .christmas__tree{
+    width: 75%;
+  }
+  .christmas__wolf{
+    width: 75%;
+  }
+  .christmas__snowglobe{
+    width: 40%;
+    padding-left: 5%;
+    padding-top: 60%;
+  }
+  .christmas__logo{
+    padding-left: 30%;
+    width: 65%;
+  }
+  .christmas__lights--fourth{
+    display: none;
+  }
+}
+@media (min-width: 500px){
+  .christmas__snowglobe{
+    transform: rotate(15deg);
+    width: 35%;
+    padding-left: 60%;
+    padding-top: 50%;
+  }
+  .christmas__tree{
+    left: -30%;
+  }
+  .christmas__wolf{
+    transform: scaleX(1);
+  }
+  .christmas__lights--third{
+    display: none;
+  }
+}
+@media (min-width: 550px){
+  .christmas__snowglobe{
+    width: 30%;
+    padding-top: 45%;
+  }
+  .christmas__lights--second{
+    padding-top: 40%;
+  }
+}
+@media (min-width: 600px){
+  .christmas{
+    height: 800px;
+  }
+  .christmas__snowglobe{
+    padding-top: 43%;
+  }
+}
+@media (min-width: 700px){
+  .christmas__logo{
+    padding-left: 40%;
+    width: 55%;
+  }
+  .christmas__snowglobe{
+    width: 30%;
+    padding-top: 35%;
+  }
+  .christmas__tree{
+    width: 55%;
+    left: -20%;
+  }
+  .christmas__wolf{
+    width: 55%;
+    left: 20%;
+  }
+  .christmas__lights--second{
+    padding-top: 30%;
+  }
+}
+@media (min-width: 800px){
+  .christmas__snowglobe{
+    width: 25%;
+  }
+  .christmas__tree{
+    width: 50%;
+  }
+  .christmas__wolf{
+    width: 50%;
+  }
+}
+@media (min-width: 900px){
+  .christmas__logo{
+    padding-top: 3rem;
+    padding-left: 55%;
+    width: 45%;
+  }
+  .christmas__snowglobe{
+    padding-top: 30%;
+    padding-left: 75%;
+  }
+  .christmas__lights--second{
+    padding-top: 25%;
+    width: 140%;
+    transform: rotate(25deg);
+  }
+}
+@media (min-width: 1000px){
+  .christmas__lights--first{
+    max-width: 80%;
+  }
+  .christmas__logo{
+    padding-top: 2rem;
+    padding-left: 55%;
+    width: 45%;
+  }
+  .christmas__snowglobe{
+    width: 20%;
+    padding-top: 27%;
+  }
+  .christmas__lights--second{
+    display: none;
+  }
+  .christmas__tree{
+    left: -10%;
+  }
+  .christmas__wolf{
+    left: 25%;
+  }
+}
+@media (min-width: 1000px){
+  .christmas__snowglobe{
+    padding-left: 5%;
+    padding-top: 25%;
+    transform: rotate(-15deg);
+  }
+  .christmas__tree{
+    left: 35%;
+    width: 40%;
+  }
+  .christmas__wolf{
+    left: 0;
+    width: 40%;
+    transform: scaleX(-1);
+  }
+  }
+  @media (min-width: 1100px){
+    .christmas__snowglobe{
+      padding-top: 20%;
+    }
+    .christmas__logo{
+      width: 35%;
+      padding-left: 65%;
+    }
+    }
+    @media (min-width: 1300px){
+      .christmas__snowglobe{
+        padding-top: 10%;
+      }
+      }
