@@ -131,6 +131,73 @@ body{
           height: auto;
         }
   }
+/*scooby doo*/
+.scooby{
+  background-color: #000;
+  display: flex;
+  display: grid;
+  place-items: center;
+}
+.scooby__text{
+  color: white;
+  font-size: 50px;
+  font-family: Creepster;
+  text-align: center;
+}
+.scooby__info{
+  display: inline;
+  color: white;
+  font-family: Josefin Sans;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.scooby__img{
+  max-width: 90%;
+  padding: 10px;
+  align-items: center;
+  margin-left: 7px;
+}
+.scooby__img:hover {
+  animation: shakeX 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+.scooby__img--video{
+  margin-left: 7.5px;
+}
+@keyframes shakeX {
+  0%,
+  100% {
+      transform: translateX(0);
+  }
+  25%,
+  75% {
+      transform: translateX(-10px);
+  }
+  50% {
+      transform: translateX(10px);
+  }
+}
+@media (min-width: 700px){
+    .scooby{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .scooby__text{
+      grid-column: span 2;
+    }
+    .scooby__info{
+      grid-column: span 2;
+    }
+  }
+  @media (min-width: 1000px){
+      .scooby{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .scooby__text{
+        grid-column: span 3;
+      }
+      .scooby__info{
+        grid-column: span 3;
+      }
+    }
 /* black and white page */
 .blackWhite {
   background-color: black;
@@ -143,9 +210,6 @@ body{
   margin: auto;
 }
 .blackWhite__image{
-  width: 100%;
-}
-.blackWhite__video {
   width: 100%;
 }
 .blackWhite__scrolling{
@@ -219,74 +283,6 @@ body{
     width: 35%;
   }
 }
-
-/*scooby doo*/
-.scooby{
-  background-color: #000;
-  display: flex;
-  display: grid;
-  place-items: center;
-}
-.scooby__text{
-  color: white;
-  font-size: 50px;
-  font-family: Creepster;
-  text-align: center;
-}
-.scooby__info{
-  display: inline;
-  color: white;
-  font-family: Josefin Sans;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.scooby__img{
-  max-width: 90%;
-  padding: 10px;
-  align-items: center;
-  margin-left: 7px;
-}
-.scooby__img:hover {
-  animation: shakeX 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
-}
-.scooby__img--video{
-  margin-left: 7.5px;
-}
-@keyframes shakeX {
-  0%,
-  100% {
-      transform: translateX(0);
-  }
-  25%,
-  75% {
-      transform: translateX(-10px);
-  }
-  50% {
-      transform: translateX(10px);
-  }
-}
-@media (min-width: 700px){
-    .scooby{
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .scooby__text{
-      grid-column: span 2;
-    }
-    .scooby__info{
-      grid-column: span 2;
-    }
-  }
-  @media (min-width: 1000px){
-      .scooby{
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .scooby__text{
-        grid-column: span 3;
-      }
-      .scooby__info{
-        grid-column: span 3;
-      }
-    }
 
 /*louie louie louie album page*/
 .louie{

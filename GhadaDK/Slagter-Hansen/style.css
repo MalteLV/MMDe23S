@@ -1,0 +1,160 @@
+body {
+  background-color: #0e0c0cb3;
+}
+
+.header-top {
+  display: inline;
+}
+.menunav {
+}
+
+.logo {
+  max-width: 50%;
+  max-height: 200px;
+  padding: 1px 1px 1px;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 17px 16px 16px;
+  margin: 6px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ea5454;
+}
+
+.menu__buttons {
+  padding-left: 60px;
+  margin: 1px 1px 1px;
+}
+
+.m-hero {
+  background-image: url("images/buffet.jpeg");
+  height: 700px;
+  top: -40px;
+  position: relative;
+  background-size: cover;
+  background-position: left;
+  color: #fff;
+}
+.introtext {
+  font-size: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(99, 96, 96, 0.886);
+  color: white;
+  padding: 10px;
+}
+
+.hero__text {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgba(102, 97, 97, 0.719);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-gap: 10px;
+  margin: 30px;
+  max-width: 100%;
+  background-color: #82757583;
+}
+.products img {
+  max-width: 100%;
+  background-color: #513636bc;
+}
+.products > section {
+  border: 8px solid rgba(222, 203, 203, 0.441);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: #878585f6;
+  color: white;
+}
+.price__style {
+  color: rgba(255, 255, 255, 0.721);
+  text-align: absolute;
+  font-size: 25px;
+  flex-grow: 1;
+}
+a:hover {
+  background-color: #ea5454;
+}
+
+.proucts__frikadelle {
+  width: 400%;
+  height: 320px;
+}
+.product__Chili {
+  height: 320px;
+  width: 300%;
+}
+.proucts__bbq {
+  width: 400%;
+  height: 320px;
+}
+
+.footer__information {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(15, 15, 10, 0.701);
+  color: aliceblue;
+  background-image: url(images/footer-newsletter-bg.jpg);
+  position: relative;
+  background-size: cover;
+  background-position: left;
+  color: #fff;
+}
+
+.information__opening__time {
+  max-width: 50%;
+  padding: 50px;
+  margin: 5px;
+}
+.information__location {
+  max-width: 50%;
+  padding: 195px;
+  margin: 0px;
+}
+.information__map {
+  padding: 60px 50px 60px;
+}
+.buttons {
+  display: block;
+  color: rgba(255, 255, 255, 0.89);
+  background-color: rgba(224, 90, 90, 0.862);
+  border-radius: 1em;
+  padding: 1em 2em;
+}
+
+.footer__logo {
+  opacity: 60%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
