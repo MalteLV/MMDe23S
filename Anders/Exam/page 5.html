@@ -7,15 +7,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleLogin.css" />
     <title>Nærboks</title>
   </head>
-  <body>
+  <body class="bodyLogin">
     <header class="headerLogin">
       <svg
+        class="loginBack"
         fill="#fffffff"
-        width="40px"
-        height="40px"
+        width="24px"
+        height="24px"
         viewBox="0 0 524 524"
         style="
           shape-rendering: geometricPrecision;
@@ -48,12 +49,25 @@
         </g>
       </svg>
     </header>
-    <main>
+
+    <section class="logoBackground">
       <img class="logo" src="Images/nærboks__logo.png" alt="" />
-      <p class="main__text">Du ville modtager en aktiveringskode via SMS</p>
-      <a class="button--largeBlue" href="">Opret bruger</a>
-      <a class="button--large">Log på</a>
-      <p class="main__countdownText">Send kode igen 00:56</p>
-    </main>
+    </section>
+    <section>
+      <p class="main__text activationText">
+        Du ville modtager en aktiveringskode via SMS
+      </p>
+      <section class="inputActivationFlex">
+        <input
+          class="inputActivation"
+          type="text"
+          placeholder="Indtast din aktiveringskode"
+        />
+      </section>
+      <section class="countdownButtonText">
+        <a class="button button--large">Log på</a>
+        <p class="main__countdownText">Send kode igen 00:56</p>
+      </section>
+    </section>
   </body>
 </html>
