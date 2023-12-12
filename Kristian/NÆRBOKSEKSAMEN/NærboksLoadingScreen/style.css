@@ -1,0 +1,48 @@
+body {
+  background-color: #d9ddf1;
+  text-align: center;
+  margin: 0;
+}
+.logo {
+  margin-top: 3rem;
+  width: 200px;
+}
+.clouds {
+  width: 250px;
+  display: block;
+  margin-inline: auto;
+}
+.loader {
+  margin-top: 1rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #d9ddf1;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #d4d4d4;
+  border-top-color: #00a0d6;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.frontPage__image {
+  width: 300px;
+  transform: scaleX(-1);
+  position: fixed;
+  bottom: -50px;
+  right: -50px;
+  opacity: 75%;
+}
