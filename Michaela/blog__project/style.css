@@ -1,0 +1,346 @@
+body {
+    font-family: "Pavanam", sans-serif;
+  }
+  .header__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+   
+  /* General max width of site */
+  .header,
+  .main,
+  .footer {
+    width: 100%;
+  }
+   
+  /* - - - HEADER - - - */
+  .navbar {
+    padding: 1rem;
+  }
+   
+  .navbar__logo {
+    text-decoration: none;
+    color: #783e20;
+  }
+   
+  .hamburger {
+    display: none;
+  }
+   
+  .hamburger__bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+    margin: 5px 0;
+  }
+   
+  .navbar__menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    list-style: none;
+  }
+   
+  .menuItem {
+    list-style: none;
+    margin-right: 2rem;
+  }
+   
+  .menuItem__link {
+    color: black;
+    text-decoration: none;
+    margin-right: 2rem;
+  }
+   
+  .menuItem__link:hover {
+    color: #783e20;
+  }
+  .header {
+    height: 200px;
+    background-image: url("images/sønderborg.jpg");
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  
+  .header {
+    margin: 0;
+  }
+   
+  .menuItem__link:hover {
+    color: #783e20;
+  }
+   
+  .arrowexpand {
+    text-align: center;
+    padding: 10px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+   
+  .post__image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  p {
+    font-size: larger;
+  }
+   
+  .topics {
+    font-weight: bold;
+    font-size: larger;
+  }
+  .video {
+    width: 35%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .youtubeVideo {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .sociallogos {
+    width: 40px;
+    display: inline;
+    padding-left: 0.5rem;
+  }
+  .line--top{
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 2px;
+    width: 50%;
+    background-color: #cee5f6;
+  }
+  .line--buttom{
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 2px;
+    width: 50%;
+    background-color: #cee5f6;
+  }
+  .intro__title{
+    text-align: center;
+    margin: 0;
+  }
+  .intro__teaser{
+    margin: 0;
+  }
+   
+  /* - - - MAIN - - - */
+  .main {
+    max-width: 80%;
+    margin: auto;
+  }
+   
+  /* - - - POSTS - - - */
+  .posts {
+    margin-bottom: 2rem;
+  }
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
+  .active{
+    transform: rotate(180deg);
+  }
+   
+  /* - - - POST - - - */
+  .post {
+  }
+  .post__title {
+    text-align: center;
+    margin: 0.5rem;
+  }
+  .post__image {
+    max-width: 100%;
+  }
+  .post__teaser {
+  }
+  .post__readmore {
+  }
+   
+  /* - - - FOOTER - - - */
+  .footer {
+    background-color: #cee5f6;
+  }
+  .footer__desciption {
+  }
+  .footer__social {
+    
+  }
+  .footer__icon {
+  }
+  .footer__copyright {
+  }
+   
+  .footer__icon--linkedIn {
+    width: 40px;
+    display: inline;
+    padding-left: 0.5rem;
+  }
+  .footer__icon--facebook {
+    width: 40px;
+    display: inline;
+  }
+  .footer__icon--instagram {
+    width: 40px;
+    display: inline;
+    padding-left: 0.5rem;
+  }
+  @media (min-width: 800px) {
+    .text-box {
+      display: block;
+      font-size: x-large;
+      font-style: italic;
+    }
+    .hairstyles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+   
+    @media (max-width: 600px) {
+      /*  Footer styling */
+    }
+  }
+   
+  @media (max-width: 800px) {
+    .navbar__menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #b3cdb6;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+   
+    .navbar__menu.active {
+      left: 0;
+    }
+   
+    .menuItem {
+      margin: 2.5rem 0;
+    }
+   
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+   
+    .hamburger.active .hamburger__bar:nth-child(2) {
+      opacity: 0;
+    }
+   
+    .hamburger.active .hamburger__bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
+    }
+   
+    .hamburger.active .hamburger__bar:nth-child(3) {
+      -webkit-transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .expandable-title {
+      cursor: pointer;
+      background-color: #b3cdb6;
+      padding: 15px;
+      padding-bottom: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+   
+    .expandable-text {
+      cursor: pointer;
+      background-color: #b3cdb6;
+      padding: 5px;
+      border-radius: 5px;
+    }
+   
+    .hidden-text {
+      display: none;
+      margin: 5px;
+      padding: 5px;
+      background-color: #b3cdb6;
+      border-radius: 5px;
+      font-size: larger;
+    }
+  }
+  @media (min-width: 800px) {
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+    .menuItem {
+      margin-left: 5rem;
+      list-style: none;
+      display: none;
+    }
+   
+    .expandable-title {
+      cursor: pointer;
+      background-color: #b3cdb6;
+      padding: 15px;
+      padding-bottom: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 0;
+      column-count: 2;
+      column-gap: 20px;
+    }
+    .expandable-text {
+      cursor: pointer;
+      background-color: #b3cdb6;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .header {
+      background-image: url("images/sønderborg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+    }
+    .expandable-text {
+      cursor: pointer;
+      background-color: #b3cdb6;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .hidden-text {
+      display: none;
+      margin: 5px;
+      padding: 5px;
+      background-color: #b3cdb6;
+      border-radius: 5px;
+      font-size: larger;
+    }
+  }

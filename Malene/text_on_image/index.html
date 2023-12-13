@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billeder eksempel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: darkred;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .imagesSection {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .imageCard {
+            position: relative;
+        }
+
+        .imageCard__image {
+            display: block;
+        }
+
+        .imageCard__text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 1rem;
+            margin: 0;
+        }
+
+        @media (min-width: 500px) {
+            .imageCard__text {
+                position: static;
+            }
+
+            .imageCard {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="imagesSection">
+        <section class="imageCard">
+            <img class="imageCard__image" src="image/mark.png" alt="">
+            <p class="imageCard__text">Some text</p>
+        </section>
+
+        <section class="imageCard">
+            <img class="imageCard__image" src="image/taylor.png" alt="">
+            <p class="imageCard__text">Some text</p>
+        </section>
+
+        <section class="imageCard">
+            <img class="imageCard__image" src="image/qtc.png" alt="">
+            <p class="imageCard__text">Some text</p>
+        </section>
+
+        <section class="imageCard">
+            <img class="imageCard__image" src="image/matpat.png" alt="">
+            <p class="imageCard__text">Some text</p>
+        </section>
+    </main>
+</body>
+
+</html>

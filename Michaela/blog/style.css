@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* General max width of site */
+  .header, .main, .footer {
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  /* - - - HEADER - - - */
+  .header {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/soenderborg-by-drone-scaled.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .header__title {
+    background-color: white;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0.05rem;
+    position: relative;
+    top: 30%;
+    left: 10%;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+   
+  .hamburger {
+    /* display: none; */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+   
+  .hamburger__bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+  }
+   
+  .navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* - - - MENU - - - */
+  .menu {
+  }
+  .menu__list {
+      display: none;;
+
+  }
+  .menu__list.active {
+    display: flex;
+    list-style-type: none;
+  }
+  .menu__item {
+    padding-inline: 0.2rem;
+  }
+  .menu__link {
+    padding-inline: 0.4rem;
+  }
+  
+  /* - - - MAIN - - - */
+  .main {}
+  
+  /* - - - POSTS - - - */
+  .posts {}
+  
+  /* - - - POST - - - */
+  .post {}
+  .post__title {}
+  .post__image {
+    width: 100%;
+  }
+  .post__teaser {}
+  .post__readmore {}
+  
+  /* - - - FOOTER - - - */
+  .footer {}
+  .footer__desciption {}
+  .footer__social {}
+  .footer__icon {}
+  .footer__copyright {}
+  
+  .footer__icon--linkedIn {}
+  .footer__icon--facebook {}
+  .footer__icon--instagram {}

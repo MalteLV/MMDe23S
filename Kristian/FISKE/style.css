@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  background-image: url(images/background.png);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  display: grid;
+}
+.header {
+  position: relative;
+  background-color: #000083;
+  padding: 2.5rem;
+  z-index: 0;
+}
+#progress-bar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 8px;
+  background-color: #f4f4f4;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+#progress-bar {
+  height: 0;
+  background-color: #e74c3c; /* Red color for the progress bar */
+  transition: height 0.3s;
+}
+.ball {
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16rem;
+  height: 12rem;
+  background-color: #000083;
+  border-radius: 50%;
+  z-index: 1; /* Set a lower z-index value */
+}
+.header__image {
+  width: 12rem;
+  display: block;
+  margin: 0 auto;
+  z-index: 1; /* Set a higher z-index value than the ball */
+  position: relative;
+  top: -4rem;
+  animation: backInDown;
+  animation-duration: 2s;
+}
+.beerFish {
+  background-color: #000083;
+  padding: 1rem;
+  height: auto;
+  margin: 20px auto; /* Add some margin for better spacing */
+  font-size: medium;
+  max-width: 20rem;
+  color: white;
+  border-radius: 1rem;
+  text-align: left;
+}
+.beerFishImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.button {
+  text-align: center;
+  display: block;
+  padding: 0.5rem;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #b6caff;
+  color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  max-width: 100%;
+  height: auto;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+.bigFish {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+  cursor: pointer;
+  animation: lightSpeedOutLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+.clicked {
+  animation: lightSpeedOutLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+@media (min-width: 800px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fishBeer {
+    grid-column: span 2;
+  }
+}

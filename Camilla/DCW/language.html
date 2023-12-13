@@ -7,17 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="mainPage--maintenance">
       <section class="mainPage--maintenance">
-        <section class="standbyScreen__error standby">
-          <a class="standbyScreen__closeIcon" href="index.html"
-            ><img src="images/x.svg" alt="close icon"
-          /></a>
-          <img
-            class="standbyScreen__errorIcon"
-            src="images/error.svg"
-            alt="error icon"
-          />
           <h2 class="header">Daglig drift</h2>
           <nav class="mainMenu">
             <a class="mainMenu__icons" href="index.html"
@@ -75,20 +65,5 @@
         </section>
       </section>
     </section>
-    <script>
-      const standbyElement = document.querySelector(".standby");
-      standbyElement.addEventListener("click", () => {
-        doTheTimeout();
-        standbyElement.classList.toggle("standby--active");
-      });
-      function doTheTimeout() {
-        // standbyElement.classList.toggle('standby--active');
-        setTimeout(() => {
-          standbyElement.classList.toggle("standby--active");
-        }, 10000);
-      }
-
-      doTheTimeout();
-    </script>
   </body>
 </html>

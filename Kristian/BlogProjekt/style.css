@@ -1,0 +1,239 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__title {
+  background-color: white;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 0.05rem;
+  top: 30%;
+  left: 10%;
+}
+
+/* General max width of site */
+.header,
+.main,
+.footer {
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* - - - HEADER - - - */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.navbar__logo {
+  text-decoration: none;
+  color: #783e20;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger__bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  margin-left: 5rem;
+  list-style: none;
+}
+
+.menuItem__link {
+  color: #475569;
+  text-decoration: none;
+}
+
+.menuItem__link:hover {
+  color: #783e20;
+}
+.header {
+  width: 100%;
+  height: 200px;
+  background-image: url("images/soenderborg-by-drone-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header {
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.navbar__logo {
+  text-decoration: none;
+  color: #783e20;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger__bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  margin-left: 5rem;
+  list-style: none;
+}
+
+.menuItem__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: x-large;
+  font-style: italic;
+}
+
+.menuItem__link:hover {
+  color: #783e20;
+}
+
+/* - - - MAIN - - - */
+.main {
+}
+
+/* - - - POSTS - - - */
+.posts {
+}
+
+/* - - - POST - - - */
+.post {
+}
+.post__title {
+  padding-top: 100px;
+}
+.post__image {
+  width: 100%;
+}
+.post__teaser {
+}
+.post__readmore {
+}
+
+/* - - - FOOTER - - - */
+.footer {
+}
+.footer__desciption {
+}
+.footer__social {
+}
+.footer__icon {
+}
+.footer__copyright {
+}
+
+.footer__icon--linkedIn {
+}
+.footer__icon--facebook {
+}
+.footer__icon--instagram {
+}
+@media (min-width: 800px) {
+  .hairstyles__items {
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+  }
+
+  .text-box {
+    display: block;
+    font-size: x-large;
+    font-style: italic;
+  }
+  .hairstyles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 600px) {
+    /*  Footer styling */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #3ca2ec;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar__menu.active {
+    left: 0;
+  }
+
+  .menuItem {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .hamburger__bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .hamburger__bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .hamburger__bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

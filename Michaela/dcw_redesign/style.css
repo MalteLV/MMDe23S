@@ -80,6 +80,7 @@
     background-color: #F24848;
     -webkit-transition: .4s;
     transition: .4s;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   }
  
   .slider:before {
@@ -130,11 +131,17 @@ input + .slider:before {
   .slider.round:before {
     border-radius: 50%;
   }
+  .toggle{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 38px;
+    margin-bottom: 38px;
+  }
+
+
 .navbar{
     background-color: #60ABF1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-
-    /*height: 47px;*/
     bottom: 0;
     left: 0;
     width: 100%;
@@ -146,7 +153,7 @@ input + .slider:before {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center both horizontally and vertically */
+    align-items: center;
     width: 100%;
     height: 47px;  
 }
@@ -166,44 +173,35 @@ input + .slider:before {
     height: 100%;
     z-index: 1;
 }
-
-/* Styling for the code container */
 .code__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh;
 }
-
-/* Styling for the code input box */
 .code-input {
     width: 150px;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
-    border-radius: 10px; /* Rounded sides */
+    border-radius: 10px;
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: bolder;
     margin-top: 4px;
-    
+   
 }
-
+ 
 input[type="text"] {
     width: 100%;
-    border: none; 
+    border: none;
 }
-
-/* Styling for the keypad container */
 .keypad-container {
     text-align: center;
 }
-
-/* Styling for circular buttons */
 .circle {
     width: 37px;
     height: 37px;
-    border-radius: 50%; /* Makes the buttons circular */
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;

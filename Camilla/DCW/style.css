@@ -33,6 +33,7 @@ body {
   );
   padding-top: 23px;
   grid-row: 1 / span 3;
+  height: 220px;
 }
 .mainMenu__icons {
   background-color: #6cb3cc;
@@ -373,9 +374,8 @@ input:checked + .slider:before {
   grid-template-rows: 26px 1fr;
   text-decoration: none;
   color: black;
-  margin-left: 16px;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 1rem;
+  padding-top: 0.3rem;
 }
 .languageImages {
   width: 23px;

@@ -1,0 +1,98 @@
+body {
+  background: rgb(225,99,3);
+background: linear-gradient(0deg, rgba(225,99,3,1) 0%, rgba(225,206,116,1) 57%, rgba(65,226,221,1) 83%, rgba(19,151,174,1) 100%);
+}
+
+header {
+  position: relative;
+  height: 400px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url(picture/Extreme_vaction_pic/headerleft.png), url(picture/Extreme_vaction_pic/headercenter.jpg), url(picture/Extreme_vaction_pic/headerright.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: header-slideshow 30s infinite;
+}
+@keyframes header-slideshow {
+  0% {
+      background-image: url(picture/Extreme_vaction_pic/headerleft.png);
+  }
+  33% {
+      background-image: url(picture/Extreme_vaction_pic/headercenter.jpg);
+  }
+  66% {
+      background-image: url(picture/Extreme_vaction_pic/headerright.jpg);
+  }
+  100% {
+      background-image: url(picture/Extreme_vaction_pic/headerleft.png); 
+  }
+}
+
+.logo-left, .logo-right {
+  padding: 10px; 
+}
+
+.logo-left img, .logo-right img {
+  width: 50px; 
+}
+
+.header-text {
+  text-align: center;
+  color: #fff; 
+  font-size: 36px; 
+  background-color: rgba(255, 255, 255, 0.6); 
+  font-family: monton, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px; 
+  padding: 5%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row; 
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 8px; 
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.card-header {
+  flex: 1; 
+  padding: 20px; 
+}
+.card-header a {
+  color: black;
+}
+.card-header h2 {
+  font-family: inter, sans-serif;
+}
+
+.card-image {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; 
+}
+
+.card-image img {
+  max-width: 100%; 
+  margin-right: 15px;
+}
+.card-image a {
+  display: inline-block;
+  margin-right: 15px; 
+}
+
+.card-header a:hover {
+  color: red; 
+}
+
+.card-image a:hover img {
+  transform: scale(110%); 
+}
